@@ -58,11 +58,32 @@ Route::get('/', function () {
         'as' => 'category.destroy'
     ]);
         /**
-         * ROUTING OF ...
+         * ROUTING OF PLACES
          */
-
-
-
+        Route::get('place',[
+            'uses' => 'PlaceController@index',
+            'as' => 'place.index'
+        ]);
+        Route::get('place/create',[
+            'uses' => 'PlaceController@create',
+            'as' => 'place.create'
+        ]);
+        Route::post('place/create',[
+            'uses' => 'PlaceController@store',
+            'as' => 'place.store'
+        ]);
+        Route::get('place/edit/{id}',[
+            'uses' => 'PlaceController@edit',
+            'as' => 'place.edit'
+        ]);
+        Route::post('place/update/{id}',[
+            'uses' => 'PlaceController@update',
+            'as' => 'place.update'
+        ]);
+        Route::get('place/delete/{id}',[
+            'uses' => 'PlaceController@destroy',
+            'as' => 'place.destroy'
+        ]);
 
         /**
          * ROUTING OF ...
