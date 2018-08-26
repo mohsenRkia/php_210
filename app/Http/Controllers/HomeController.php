@@ -1,19 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Places;
+use App\Models\Categories;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    protected $place;
+    protected $categories;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Places $places, Categories $categories)
     {
-        $this->middleware('auth');
+        $this->place = $places;
+        $this->categories = $categories;
     }
 
     /**
@@ -23,6 +27,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $places = $this->place->all();
+        return view('site.index',compact('places'));
+    }
+
+    public function show($id)
+    {
+        $place = $this->place->find($id);
+        $cat = $this->categories->find($place->category_id);
+        return view('site.place',compact(['place','cat']));
     }
 }

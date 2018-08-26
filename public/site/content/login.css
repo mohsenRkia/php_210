@@ -1,0 +1,35 @@
+﻿.jbLoginBackground{
+    height: 860px;
+    background-image: url(images/login-background.jpg);
+    background-position: center left;
+    background-attachment: fixed;
+    direction: rtl;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form-horizontal .control-label{color:#676767;}
+.checkBoxSignIn .jbcheckboxLogin, .checkBoxSignUp .jbcheckboxSignUp{margin-top:11px;}
+.jbTitle{border-bottom:2px solid #fff;color: #085882;}
+.SigninBox{background-color:rgba(255,255,255,.5);box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 1px 5px rgba(0,0,0,0.2);}
+.SignUpBox{background-color:rgba(255,255,255,.5);box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 1px 5px rgba(0,0,0,0.2);}
+ul.list-unstyled{padding:0;}
+.jbAlertBox{margin-top:30px;margin-bottom:20px;}
+
+@media (min-width: 768px) {
+.checkBoxSignIn .jbcheckboxLogin, .checkBoxSignUp .jbcheckboxSignUp{margin-top:11px;}
+.checkBoxSignIn .jbcheckboxLogin.select, .checkBoxSignUp .jbcheckboxSignUp.select {margin-top:11px;}
+.SigninBox {padding:10px;}
+.SignUpBox {margin-top: 10px;padding:10px;}
+}
+
+
+@media (max-width: 768px) {
+.checkBoxSignIn .jbcheckboxLogin, .checkBoxSignUp .jbcheckboxSignUp{margin-top:5px;}
+.checkBoxSignIn .jbcheckboxLogin.select, .checkBoxSignUp .jbcheckboxSignUp.select {margin-top:5px;}
+.SigninBox {padding:10px;}
+.SignUpBox {margin-top: 10px;padding:10px;}
+}
+.jbTitle {margin-top:5px;}
+
+

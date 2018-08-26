@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Models\Orders;
+use App\Models\Places;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -26,4 +28,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function places()
+    {
+        return $this->hasMany(Places::class);
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Orders::class);
+    }
 }

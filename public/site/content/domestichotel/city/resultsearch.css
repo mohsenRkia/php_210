@@ -1,0 +1,1825 @@
+﻿.jbSearchBoxResult .form-inline .form-control {
+    width: 100%;
+}
+
+.jbSearchBoxResult input {
+    direction: rtl;
+    text-align: right;
+}
+
+.jbMainBox {
+    padding: 10px 0px;
+    text-align: right;
+    direction: rtl;
+}
+
+.jbNameJaResult {
+    color: #4C4C4C;
+}
+
+.jbNameJaResult {
+    font-size: 26px;
+    color: #4C4C4C;
+    font-family: iransans, Tahomal;
+    font-weight: 600;
+}
+
+    .jbNameJaResult .jbNameMap {
+        color: #F47008;
+    }
+
+        .jbNameJaResult .jbNameMap:hover {
+            color: #C35804;
+        }
+
+        .jbNameJaResult .jbNameMap i {
+            color: #8B8B8B;
+        }
+
+    .jbNameJaResult h1 {
+        font-size: 26px;
+        margin: 6px 0 10px;
+        padding: 0px;
+    }
+
+.jbInfoSearch {
+    color: #606060;
+    margin-bottom: 10px;
+}
+
+    .jbInfoSearch i {
+        color: #8B8B8B;
+    }
+
+.jbContentResult {
+    text-align: right;
+    direction: rtl;
+    padding: 5px 0 5px 0;
+}
+
+.jbFilterBox h3 {
+    padding: 5px;
+    margin: 0px;
+    border-bottom: 1px solid #E2E2E2;
+    font-family: iransans,Tahomal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0A71A5;
+}
+
+    .jbFilterBox h3 i {
+        color: #8b8b8b;
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+.jbUlFilter {
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+}
+
+    .jbUlFilter li {
+        color: #818181;
+        font-size: 13px;
+        margin-bottom: 1px;
+        padding: 4px 0px;
+        cursor: pointer;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+        .jbUlFilter li:hover {
+            background-color: #F5F4F4;
+        }
+
+.jbFilterBox .jbLiTitle {
+    padding: 5px 0px;
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+    .jbFilterBox .jbLiTitle i {
+        color: #ED8323;
+        font-size: 18px;
+        margin-left: 5px;
+    }
+
+.jbUlFilter li input {
+    display: none;
+}
+
+.jbUlFilter li .jbcheckbox.select {
+    color: #000;
+    font-size: 12px;
+    margin-right: 0px;
+    margin-left: 5px;
+    padding: 3px;
+    float: right;
+    margin-left: 5px;
+    border: 1px solid #69C0AC;
+    width: 15px;
+    height: 15px;
+    margin-top: 2px;
+    background-color: #69C0AC;
+    background-image: url(images/bg_checkbox.html);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.jbUlFilter li .jbcheckboxd.disable {
+    color: #fff;
+    margin-right: 0px;
+    margin-left: 5px;
+    padding: 3px;
+    float: right;
+    margin-left: 5px;
+    border: 1px solid #D8D8D8;
+    width: 15px;
+    height: 15px;
+    margin-top: 2px;
+}
+
+.jbUlFilter li .jbcheckbox {
+    color: #fff;
+    margin-left: 5px;
+    padding: 3px;
+    float: right;
+    margin-left: 5px;
+    border: 1px solid #7D7D7D;
+    width: 15px;
+    height: 15px;
+    margin-top: 2px;
+}
+
+    .jbUlFilter li .jbcheckbox:hover {
+        border: 1px solid #69C0AC;
+    }
+
+.jbUlFilter li:hover .jbcheckbox {
+    border: 1px solid #69C0AC;
+}
+
+.jbUlFilter li .jbRadioInput.select {
+    color: #000;
+    font-size: 12px;
+    margin-right: 0px;
+    margin-left: 5px;
+    padding: 3px;
+    float: right;
+    margin-left: 5px;
+    border: 1px solid #69C0AC;
+    width: 15px;
+    height: 15px;
+    margin-top: 2px;
+    background-color: #69C0AC;
+    background-image: url(images/bg_checkbox.html);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.jbUlFilter li .jbRadioInput.disable {
+    color: #fff;
+    margin-right: 0px;
+    margin-left: 5px;
+    padding: 3px;
+    float: right;
+    margin-left: 5px;
+    border: 1px solid #D8D8D8;
+    width: 15px;
+    height: 15px;
+    margin-top: 2px;
+}
+
+.jbUlFilter li .jbRadioInput {
+    color: #fff;
+    margin-left: 5px;
+    padding: 3px;
+    float: right;
+    margin-left: 5px;
+    border: 1px solid #7D7D7D;
+    width: 15px;
+    height: 15px;
+    margin-top: 2px;
+    border-radius: 50%;
+}
+
+    .jbUlFilter li .jbRadioInput:hover {
+        border: 1px solid #69C0AC;
+    }
+
+.jbUlFilter li:hover .jbRadioInput {
+    border: 1px solid #69C0AC;
+}
+
+.jbUlFilter li .jbCountFilter {
+    float: left;
+}
+
+.jbSearchBoxResult {
+    background-color: #F8F8F8;
+    border: 1px solid #E4E4E4;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+
+.jbNughtCountResult div {
+    padding: 0px 5px 0px 0px;
+    text-align: center;
+    height: 34px;
+    line-height: 34px;
+}
+
+.jbSortResultBox {
+    padding: 10px 0px;
+    border: 1px solid #E2E2E2;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.jbCountResultJa div {
+    height: 34px;
+    line-height: 34px;
+}
+
+.jbCountResultJa i {
+    color: #4C4C4C;
+}
+
+.jbCountResultJa span {
+    color: #9F0404;
+    font-size: 17px;
+}
+
+.jbAViewGrid {
+    display: block;
+    float: left;
+    margin-right: 3px;
+    padding: 6px 8px;
+    color: #636363;
+    height: 34px;
+}
+
+    .jbAViewGrid i {
+        font-size: 20px;
+    }
+
+    .jbAViewGrid.select {
+        color: gray;
+    }
+
+    .jbAViewGrid:hover {
+        background-color: #d7d7d7;
+    }
+
+.jbResultList .jbReserveDateFirst {
+    font-size: 11px;
+}
+
+    .jbResultList .jbReserveDateFirst span {
+        font-size: 13px;
+    }
+
+.jbResultList .jbResultGrid {
+    width: 33.3333%;
+    margin: 0px 5px 10px 5px;
+    float: right;
+    border: 1px solid #E2E2E2;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.jbResultGrid .jbBoxResultJa {
+    border: 1px solid #E2E2E2;
+    padding: 0px 10px 10px 10px;
+    margin-bottom: 10px;
+    float: right;
+    width: 32.1954%;
+    margin-right: 10px;
+    min-height: 398px;
+}
+
+.jbBoxResultJa:hover {
+    border: 1px solid #E4E4BB;
+    background-color: #FCFCEF;
+}
+
+.rowRight.jbResultGrid {
+    margin-right: -20px !important;
+}
+
+.jbResultGrid .rowRight {
+    margin-right: 0px !important;
+}
+
+.jbResultGrid .jbTtileBoxOffer {
+    display: none;
+}
+
+.jbResultGrid .jbAddressPlace {
+    color: #8E8E8E;
+    font-size: 13px;
+    height: 23px;
+    overflow: hidden;
+}
+
+.jbNameJaResult {
+    font-size: 26px;
+    color: #4C4C4C;
+    font-family: iransans, Tahomal;
+    font-weight: 600;
+}
+
+    .jbNameJaResult .jbNameMap {
+        color: #F47008;
+    }
+
+        .jbNameJaResult .jbNameMap:hover {
+            color: #C35804;
+        }
+
+        .jbNameJaResult .jbNameMap i {
+            color: #8B8B8B;
+        }
+
+    .jbNameJaResult h1 {
+        font-size: 26px;
+        margin: 6px 0 10px;
+        padding: 0px;
+    }
+
+.jbInfoSearch {
+    color: #606060;
+    margin-bottom: 10px;
+}
+
+    .jbInfoSearch i {
+        color: #8B8B8B;
+    }
+
+.jbContentResult {
+    text-align: right;
+    direction: rtl;
+}
+
+.jbFilterBox {
+    padding: 0 0 0 8px;
+}
+
+    .jbFilterBox h3 {
+        padding: 5px;
+        margin: 0px;
+        border-bottom: 1px solid #E2E2E2;
+        font-family: iransans,Tahomal;
+        font-weight: 400;
+        font-size: 16px;
+        color: #0A71A5;
+    }
+
+        .jbFilterBox h3 i {
+            color: #8b8b8b;
+            font-weight: normal;
+            font-size: 14px;
+        }
+
+.jbUlFilter {
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+}
+
+    .jbUlFilter li {
+        color: #818181;
+        font-size: 13px;
+        margin-bottom: 1px;
+        padding: 4px 0px;
+        cursor: pointer;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+        .jbUlFilter li:hover {
+            background-color: #F5F4F4;
+        }
+
+        .jbUlFilter li input {
+            display: none;
+        }
+
+        .jbUlFilter li .jbcheckbox.select {
+            color: #000;
+            font-size: 12px;
+            margin-right: 0px;
+            margin-left: 5px;
+            padding: 3px;
+            float: right;
+            margin-left: 5px;
+            border: 1px solid #69C0AC;
+            width: 15px;
+            height: 15px;
+            margin-top: 2px;
+            background-color: #69C0AC;
+            background-image: url(images/bg_checkbox.html);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .jbUlFilter li .jbcheckboxd.disable {
+            color: #fff;
+            margin-right: 0px;
+            margin-left: 5px;
+            padding: 3px;
+            float: right;
+            margin-left: 5px;
+            border: 1px solid #D8D8D8;
+            width: 15px;
+            height: 15px;
+            margin-top: 2px;
+        }
+
+        .jbUlFilter li .jbcheckbox {
+            color: #fff;
+            margin-left: 5px;
+            padding: 3px;
+            float: right;
+            margin-left: 5px;
+            border: 1px solid #7D7D7D;
+            width: 15px;
+            height: 15px;
+            margin-top: 2px;
+        }
+
+            .jbUlFilter li .jbcheckbox:hover {
+                border: 1px solid #69C0AC;
+            }
+
+        .jbUlFilter li:hover .jbcheckbox {
+            border: 1px solid #69C0AC;
+        }
+
+        .jbUlFilter li .jbRadioInput.select {
+            color: #000;
+            font-size: 12px;
+            margin-right: 0px;
+            margin-left: 5px;
+            padding: 3px;
+            float: right;
+            margin-left: 5px;
+            border: 1px solid #69C0AC;
+            width: 15px;
+            height: 15px;
+            margin-top: 2px;
+            background-color: #69C0AC;
+            background-image: url(images/bg_checkbox.html);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .jbUlFilter li .jbRadioInput.disable {
+            color: #fff;
+            margin-right: 0px;
+            margin-left: 5px;
+            padding: 3px;
+            float: right;
+            margin-left: 5px;
+            border: 1px solid #D8D8D8;
+            width: 15px;
+            height: 15px;
+            margin-top: 2px;
+        }
+
+        .jbUlFilter li .jbRadioInput {
+            color: #fff;
+            margin-left: 5px;
+            padding: 3px;
+            float: right;
+            margin-left: 5px;
+            border: 1px solid #7D7D7D;
+            width: 15px;
+            height: 15px;
+            margin-top: 2px;
+            border-radius: 50%;
+        }
+
+            .jbUlFilter li .jbRadioInput:hover {
+                border: 1px solid #69C0AC;
+            }
+
+        .jbUlFilter li:hover .jbRadioInput {
+            border: 1px solid #69C0AC;
+        }
+
+        .jbUlFilter li .jbCountFilter {
+            float: left;
+        }
+
+.jbSearchBoxResult {
+    background-color: #F8F8F8;
+    border: 1px solid #E4E4E4;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+
+.jbNughtCountResult div {
+    padding: 0px 5px 0px 0px;
+    text-align: center;
+    height: 34px;
+    line-height: 34px;
+}
+
+.jbCountResultJa div {
+    height: 34px;
+    line-height: 34px;
+}
+
+.jbCountResultJa i {
+    color: #4C4C4C;
+}
+
+.jbCountResultJa span {
+    color: #9F0404;
+    font-size: 17px;
+}
+
+.jbResultList .jbReserveDateFirst {
+    font-size: 11px;
+}
+
+    .jbResultList .jbReserveDateFirst span {
+        font-size: 13px;
+    }
+
+.jbResultList .jbResultGrid {
+    width: 33.3333%;
+    margin: 0px 5px 10px 5px;
+    float: right;
+    border: 1px solid #E2E2E2;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.jbResultList .jbBoxResultJa {
+    border: 1px solid #E2E2E2;
+    margin-bottom: 5px;
+    -moz-animation: fadeInBox 1s ease-in; /* Firefox */
+    -webkit-animation: fadeInBox 1s ease-in; /* Safari and Chrome */
+    -o-animation: fadeInBox 1s ease-in; /* Opera */
+    animation: fadeInBox 1s ease-in;
+    border-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    /*border-radius: 5px;*/
+    box-shadow: 2px 2px 2px 2px #efefef;
+}
+
+    .jbResultList .jbBoxResultJa:hover,
+    .jbResultGridNew .jbBoxResultJa:hover {
+        box-shadow: 1px 1px 1px 1px #aaa;
+        -moz-transform: scale(1.001);
+        -webkit-transform: scale(1.001);
+        transform: scale(1.001);
+    }
+
+.jbResultGrid .jbBoxResultJa {
+    border: 1px solid #E2E2E2;
+    padding: 0px 10px 10px 10px;
+    margin-bottom: 10px;
+    float: right;
+    width: 32.1954%;
+    margin-right: 10px;
+    min-height: 398px;
+}
+
+.jbResultList .jbBoxResultJa:hover,
+.jbResultGridNew .jbBoxResultJa:hover {
+    border: 1px solid #E4E4BB;
+    background-color: #FCFCEF;
+}
+
+.rowRight.jbResultGrid {
+    margin-right: -20px !important;
+}
+
+.jbResultGrid .rowRight {
+    margin-right: 0px !important;
+}
+
+.jbResultGrid .jbTtileBoxOffer {
+    display: none;
+}
+
+.jbResultGrid .jbAddressPlace {
+    color: #adadad;
+    font-size: 13px;
+    height: 23px;
+    overflow: hidden;
+}
+
+.jbResultList .jbBoxPicAndTxtReesult {
+    float: right;
+    padding: 11px 16px 0 10px;
+}
+
+    .jbResultList .jbBoxPicAndTxtReesult b {
+        margin: 0px;
+        padding:10px 0px;
+        text-align: right;
+        direction: ltr;
+        display: block;
+    }
+
+    .jbResultList .jbBoxPicAndTxtReesult .jbANameJaResult:hover,
+    .jbResultGridNew .jbBoxPicAndTxtReesult .jbANameJaResult:hover {
+        color: #3c4a4c;
+    }
+
+    .jbResultList .jbBoxPicAndTxtReesult .jbANameJaResult:focus,
+    .jbResultGridNew .jbBoxPicAndTxtReesult .jbANameJaResult:focus {
+        text-decoration: none !important;
+    }
+
+    .jbResultList .jbBoxPicAndTxtReesult .jbAMapNameResult,
+    .jbResultGridNew .jbBoxPicAndTxtReesult .jbAMapNameResult {
+        color: #F4A100;
+        font-size: 12px;
+        position: relative;
+        margin-right: 5px;
+    }
+
+        .jbResultList .jbBoxPicAndTxtReesult .jbAMapNameResult:hover {
+            color: #CA8500;
+        }
+
+        .jbResultList .jbBoxPicAndTxtReesult .jbAMapNameResult i {
+            color: #000;
+        }
+
+    .jbResultList .jbBoxPicAndTxtReesult .jbTextJaDetail {
+        font-size: 15px;
+        color: #4C4C4C;
+        line-height: 25px;
+        height: 127px;
+        overflow: hidden;
+        text-align: right;
+        direction: ltr;
+        word-spacing: 3px;
+    }
+
+.jbResultList .jbImgResult {
+    height: 200px;
+    background-size: cover;
+    display: block;
+    position: relative;
+    background-position: center center;
+}
+
+.jbTxtNotReserve {
+    background-color: #428bca;
+    padding: 3px 10px;
+    color: #fff;
+    margin-right: 5px;
+}
+
+    .jbTxtNotReserve:hover {
+        background-color: #1478CE;
+        color: #fff;
+        direction: ltr;
+        word-spacing: 3px;
+    }
+
+.jbResultList .jbImgResult {
+    height: 200px;
+    background-size: cover;
+    display: block;
+    position: relative;
+    background-position: center center;
+}
+
+.jbTxtNotReserve {
+    background-color: #428bca;
+    padding: 3px 10px;
+    color: #fff;
+    margin-right: 5px;
+}
+
+    .jbTxtNotReserve:hover {
+        background-color: #1478CE;
+        color: #fff;
+    }
+
+.jbStar {
+    display: block;
+    float: right;
+    position: relative;
+    top: 7px;
+}
+
+    .jbStar i {
+        color: #F1C40F;
+        font-size: 18px;
+    }
+
+.jbResultList .jbUlNameResult {
+    width: 100%;
+    display: table-cell;
+    padding: 0px;
+    float: right;
+    margin-bottom: 0;
+}
+
+.jbResultList .jbRateBoxInPic {
+    display: none;
+}
+
+.jbResultList .jbARateResultJa {
+    display: block;
+    color: #349CD2;
+    font-size: 13px;
+}
+
+    .jbResultList .jbARateResultJa span {
+        font-size: 22px;
+        color: #9B0000;
+    }
+
+    .jbResultList .jbARateResultJa b {
+        font-size: 26px;
+    }
+
+.jbResultList .jbResultCountComment {
+    color: #349CD2;
+    font-size: 13px;
+}
+
+.jbResultList .jbTitleReseltListRoom {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    padding: 4px 0px 4px 0px;
+    background-color: #F8F8F8;
+    height: 26px;
+    font-size: 11px;
+}
+
+    .jbResultList .jbTitleReseltListRoom::after {
+        clear: both;
+    }
+
+.jbResultList .jbBoxResultJaOffer .jbTitleReseltListRoom {
+    background-color: #DEF0D7;
+}
+
+.jbResultList .jbListReseltListRoom {
+    padding: 3px;
+    height: 21px;
+    font-size: 12px;
+    display: block;
+}
+
+    .jbResultList .jbListReseltListRoom:hover {
+        background-color: #F8F8F8;
+    }
+
+    .jbResultList .jbListReseltListRoom::after {
+        clear: both;
+    }
+
+.jbResultList .jbTotalPriceResultPage {
+    color: #7E7E7E;
+}
+
+    .jbResultList .jbTotalPriceResultPage .jbSpanTotalPrice {
+        color: #006498;
+        font-size: 21px;
+        margin-left: 10px;
+    }
+
+        .jbResultList .jbTotalPriceResultPage .jbSpanTotalPrice span {
+            font-weight: 600;
+        }
+
+.jbResultList .jbBoxResultJaOffer .jbListReseltListRoom:hover {
+    background-color: #DEF0D7 !important;
+}
+
+.jbResultList .jbstartPrice, .jbResultList .btn-success {
+    float: left;
+}
+
+.jbHr {
+    color: #838383;
+    background-color: #838383;
+    margin: 5px;
+}
+
+.jbBoxResultJaOffer {
+    border: 1px solid #96C583 !important;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #F4FCF1 !important;
+}
+
+    .jbBoxResultJaOffer .jbTtileBoxOffer {
+        padding: 10px 10px 10px 10px;
+        border-bottom: 1px solid #96C583;
+        margin-left: -10px;
+        margin-right: -10px;
+        color: #419220;
+    }
+
+        .jbBoxResultJaOffer .jbTtileBoxOffer i {
+            font-size: 18px;
+            margin-left: 5px;
+        }
+
+.jbUserPrsonRoom {
+    background-image: url("../images/room_user.html");
+    background-position: left center;
+    float: left;
+    height: 20px;
+    margin-right: 1px;
+    padding: 0;
+    width: 10px;
+    display: block;
+}
+
+.jbUserChildRoom {
+    background-image: url("../images/room_user.html");
+    background-position: right center;
+    float: left;
+    height: 20px;
+    margin-right: 1px;
+    padding: 0;
+    width: 8px;
+    display: block;
+}
+
+.jbStarZarb {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.jbResultList .jbSubPriceResultPage {
+    text-align: right;
+    color: #545454;
+}
+
+.jbResultList .jbScoreNumber {
+    font-family: IRANSans;
+    margin-top: 10px;
+    font-size: 19px;
+    text-align: center;
+    display: block;
+    background: rgba(255, 228, 164, 0.53);
+    line-height: 16px;
+    position: absolute;
+    direction: ltr;
+    padding-left: 2px;
+    font-weight: bold;
+    border-bottom: none;
+}
+
+.jbStar {
+    display: block;
+    float: right;
+    position: relative;
+    top: 7px;
+}
+
+    .jbStar i {
+        color: #F1C40F;
+        font-size: 18px;
+    }
+
+.jbResultList .jbUlNameResult {
+    width: 100%;
+    display: table-cell;
+    padding: 0px;
+    float: left;
+    margin-bottom: 0;
+}
+
+    .jbResultList .jbUlNameResult li {
+        float: left;
+        margin-right: 5px;
+        max-width: 100%;
+        display: inline;
+    }
+
+.jbResultList .jbRateBoxInPic {
+    display: none;
+}
+
+.jbResultList .jbARateResultJa {
+    display: block;
+    color: #349CD2;
+    font-size: 13px;
+}
+
+    .jbResultList .jbARateResultJa span {
+        font-size: 22px;
+        color: #9B0000;
+    }
+
+    .jbResultList .jbARateResultJa b {
+        font-size: 26px;
+    }
+
+.jbResultList .jbResultCountComment {
+    color: #349CD2;
+    font-size: 13px;
+}
+
+.jbResultList .jbTitleReseltListRoom {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    padding: 4px 0px 4px 0px;
+    background-color: #F8F8F8;
+    height: 26px;
+    font-size: 11px;
+}
+
+    .jbResultList .jbTitleReseltListRoom::after {
+        clear: both;
+    }
+
+.jbResultList .jbBoxResultJaOffer .jbTitleReseltListRoom {
+    background-color: #DEF0D7;
+}
+
+.jbResultList .jbListReseltListRoom {
+    padding: 3px;
+    height: 21px;
+    font-size: 12px;
+    display: block;
+}
+
+    .jbResultList .jbListReseltListRoom:hover {
+        background-color: #F8F8F8;
+    }
+
+    .jbResultList .jbListReseltListRoom::after {
+        clear: both;
+    }
+
+.jbResultList .jbTotalPriceResultPage {
+    color: #7E7E7E;
+}
+
+    .jbResultList .jbTotalPriceResultPage .jbSpanTotalPrice {
+        color: #006498;
+        font-size: 21px;
+        margin-left: 10px;
+    }
+
+        .jbResultList .jbTotalPriceResultPage .jbSpanTotalPrice span {
+            font-weight: 600;
+        }
+
+.jbResultList .jbBoxResultJaOffer .jbListReseltListRoom:hover {
+    background-color: #DEF0D7 !important;
+}
+
+.jbResultList .jbstartPrice, .jbResultList .btn-success {
+    float: left;
+}
+
+.jbHr {
+    color: #838383;
+    margin: 5px;
+}
+
+.jbBoxResultJaOffer {
+    border: 1px solid #96C583 !important;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #F4FCF1 !important;
+}
+
+    .jbBoxResultJaOffer .jbTtileBoxOffer {
+        padding: 10px 10px 10px 10px;
+        border-bottom: 1px solid #96C583;
+        margin-left: -10px;
+        margin-right: -10px;
+        color: #419220;
+    }
+
+        .jbBoxResultJaOffer .jbTtileBoxOffer i {
+            font-size: 18px;
+            margin-left: 5px;
+        }
+
+.jbUserPrsonRoom {
+    background-image: url("../images/room_user.html");
+    background-position: left center;
+    float: left;
+    height: 20px;
+    margin-right: 1px;
+    padding: 0;
+    width: 10px;
+    display: block;
+}
+
+.jbUserChildRoom {
+    background-image: url("../images/room_user.html");
+    background-position: right center;
+    float: left;
+    height: 20px;
+    margin-right: 1px;
+    padding: 0;
+    width: 8px;
+    display: block;
+}
+
+.jbStarZarb {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.jbResultList .jbSubPriceResultPage {
+    text-align: right;
+    color: #545454;
+}
+
+.jbResultList .jbScoreNumber {
+    font-family: IRANSans;
+    margin-top: 10px;
+    font-size: 19px;
+    text-align: center;
+    display: block;
+    background: rgba(255, 228, 164, 0.53);
+    line-height: 16px;
+    position: absolute;
+    direction: ltr;
+    padding-left: 2px;
+    font-weight: bold;
+    border-bottom: none;
+}
+
+    .jbResultList .jbScoreNumber .number {
+        color: #a88034;
+    }
+
+        .jbResultList .jbScoreNumber .number .max-rate {
+            font-size: 11px;
+            color: #a88034;
+            font-weight: normal;
+        }
+
+    .jbResultList .jbScoreNumber .text {
+        font-size: 16px;
+        display: inline-block;
+        font-weight: normal;
+        /*background: #f5a100;*/
+        color: #f5a100;
+        padding: 4px 5px;
+    }
+
+.jbResultList .jb-translation .jbBoxPicAndTxtReesult .col-md-4 {
+    float: left;
+}
+
+.jbResultList .jb-translation .jbScoreNumber {
+    left: 0;
+}
+
+.jbResultList .jb-translation .jbUlNameResult li {
+    float: right;
+}
+
+.jbResultList .jb-translation .jbAddressPlace {
+    text-align: right;
+}
+
+.jbResultList .jb-translation .jbBoxPicAndTxtReesult .jbTextJaDetail {
+    font-size: 13px;
+    color: #4C4C4C;
+    line-height: 2;
+    height: 127px;
+    overflow: hidden;
+    text-align: right;
+    direction: rtl;
+    word-spacing: normal;
+}
+
+.jbResultGrid .col-sg-12 {
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.jbResultGrid .jbImgResult {
+    height: 200px;
+    margin-bottom: 10px;
+    background-size: cover;
+    display: block;
+    position: relative;
+}
+
+.jbResultGrid .jbUlNameResult {
+    width: 100%;
+    padding: 0px;
+}
+
+    .jbResultGrid .jbUlNameResult li {
+        display: inline-block;
+    }
+
+.jbResultGrid .jbBoxPicAndTxtReesult h2 {
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    height: 35px;
+    overflow: hidden;
+}
+
+.jbResultGrid .jbBoxOfferRomResult {
+    display: none;
+}
+
+.jbResultGrid .btn-mobile-block {
+    display: block;
+    width: 100%;
+}
+
+.jbResultGrid .mobileNone {
+    display: none;
+}
+
+.jbResultGrid .jbBoxPicAndTxtReesult .jbANameJaResult {
+    color: #0896ff;
+    font-family: iransans,Tahomal;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+    .jbResultGrid .jbBoxPicAndTxtReesult .jbANameJaResult:hover {
+        color: #0078D1;
+    }
+
+.jbResultGrid .jbBoxPicAndTxtReesult .jbTextJaDetail {
+    font-size: 12px;
+    color: #4C4C4C;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    height: 89px;
+    overflow: hidden;
+}
+
+.jbResultGrid .jbTotalPriceResultPage {
+    color: #7E7E7E;
+}
+
+    .jbResultGrid .jbTotalPriceResultPage .jbSpanTotalPrice {
+        color: #006498;
+        font-size: 19px;
+        margin-left: 10px;
+    }
+
+        .jbResultGrid .jbTotalPriceResultPage .jbSpanTotalPrice span {
+            font-weight: 600;
+        }
+
+.jbResultGrid .mobileMarginB10 {
+    font-size: 12px;
+}
+
+.jbResultGrid .mobileCenter {
+    text-align: center !important;
+}
+
+.jbResultGrid .jbRateBoxInPic {
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.72);
+    padding: 0 10px 0px 10px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.jbResultGrid .jbARateResultJa {
+    display: block;
+    color: #fff;
+    font-size: 11px;
+}
+
+    .jbResultGrid .jbARateResultJa span {
+        font-size: 15px;
+        color: #FFEB0B;
+        margin-left: 5px;
+    }
+
+    .jbResultGrid .jbARateResultJa b {
+        font-size: 15px;
+    }
+
+.jbResultGrid .jbResultCountComment {
+    color: #fff;
+    font-size: 13px;
+}
+
+.jbResultGrid .jbBoxPicAndTxtReesult .jbAMapNameResult {
+    color: #F4A100;
+    font-size: 12px;
+    position: relative;
+    margin-right: 5px;
+}
+
+    .jbResultGrid .jbBoxPicAndTxtReesult .jbAMapNameResult:hover {
+        color: #CA8500;
+    }
+
+    .jbResultGrid .jbBoxPicAndTxtReesult .jbAMapNameResult i {
+        color: #000;
+    }
+
+.jbResultGrid .starName {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    top: auto !important;
+    z-index: 5;
+}
+
+.jbResultList .jbStarlistNone {
+    display: none !important;
+}
+
+.jbResultGrid .jbStarGridNone {
+    display: none !important;
+}
+
+.jbResultGrid .jbScoreNumber {
+    font-family: IRANSans;
+    font-size: 17px;
+    text-align: right;
+    display: inline-block;
+    background: rgba(255, 228, 164, 0.53);
+    line-height: 16px;
+    direction: ltr;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    max-width: 34%;
+    font-weight: bold;
+}
+
+    .jbResultGrid .jbScoreNumber .number {
+        color: #a88034;
+    }
+
+        .jbResultGrid .jbScoreNumber .number .max-rate {
+            font-size: 11px;
+            color: #a88034;
+            font-weight: normal;
+        }
+
+    .jbResultGrid .jbScoreNumber .text {
+        font-size: 14px;
+        display: inline-block;
+        font-weight: normal;
+        /*background: #f5a100;*/
+        color: #f5a100;
+        padding: 4px 5px;
+    }
+
+.input-group {
+    direction: ltr;
+}
+
+@media (max-width: 768px) {
+    .jbRateBoxInPic {
+        position: absolute;
+        left: 0px;
+        top: 10px;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.72);
+        padding: 0 10px 0px 10px;
+        border-radius: 0px 5px 5px 0px;
+        display: block !important;
+    }
+
+    .jbARateResultJa {
+        display: block;
+        color: #fff !important;
+        font-size: 11px !important;
+    }
+
+        .jbARateResultJa span {
+            font-size: 15px !important;
+            color: #FFEB0B !important;
+            margin-left: 5px;
+        }
+
+        .jbARateResultJa b {
+            font-size: 15px !important;
+        }
+
+    .jbResultList .jbReserveDateFirst {
+        color: #737373;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+        .jbResultList .jbReserveDateFirst > span {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+    .jbResultList .jbScoreNumber {
+        top: -48px;
+        max-width: 45%;
+        margin-top: 0;
+    }
+
+    .jbResultList .jbBoxPicAndTxtReesult {
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .jbResultList .jbReserveDateFirst {
+        background-color: #eee;
+        font-size: 12px;
+        padding: 5px 10px;
+        color: #737373;
+        text-align: center;
+    }
+
+    .divSort {
+        text-align: right;
+    }
+
+    .jbResultList .jbReserveDateFirst > span {
+        font-size: 14px;
+        font-weight: 600;
+        padding-right: 10px;
+    }
+
+    .jbResultList .jbScoreNumber {
+        top: 1px;
+    }
+}
+
+.jbSearchBoxResult .dayssDav {
+    padding-left: 10px;
+    padding-right: 0px;
+}
+
+.jbFilterMobile {
+    background-color: white;
+    border: 1px solid #E2E2E2;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+    .jbFilterMobile span {
+        display: block;
+        float: left;
+        font-size: 16px;
+        position: relative;
+        top: 0px;
+    }
+
+    .jbFilterMobile.pp {
+        position: fixed !important;
+        top: 50px;
+        z-index: 2000;
+        width: 95%;
+    }
+
+.jbFilterAttributes li {
+    display: none;
+}
+
+#showLess, #loadMore {
+    color: #ed8323;
+    cursor: pointer;
+    padding-right: 8px;
+    margin-top: -8px;
+}
+
+.jbResultList .jbOffFlag {
+    color: #888;
+    height: 40px;
+    line-height: 39px;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: center;
+    text-align: right;
+}
+
+.jbResultGrid .jbReserveDateFirst {
+    color: #737373;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+    .jbResultGrid .jbReserveDateFirst > span {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+@media (max-width: 767px) {
+    .jbFilterBox {
+        display: none;
+    }
+
+    .jbstartPrice {
+        float: none !important;
+        text-align: center;
+    }
+}
+
+
+@media (min-width: 550px) and (max-width: 991px) {
+    .jbResultList .jbReserveDateFirst {
+        font-size: 11px;
+    }
+
+    .jbResultGrid .col-sg-12, .jbTotalPriceResultPage .col-sg-12 {
+        width: 100%;
+    }
+
+    .jbResultGrid .jbBoxResultJa {
+        width: 48.1%;
+    }
+
+    .jbResultGrid .jbUlNameResult li {
+        float: none;
+    }
+
+    .col-sg-1, .col-sg-2, .col-sg-3, .col-sg-4, .col-sg-5, .col-sg-6, .col-sg-7, .col-sg-8, .col-sg-9, .col-sg-10, .col-sg-11 {
+        float: right;
+    }
+
+    .col-sg-4 {
+        width: 33.33%;
+    }
+
+    .col-sg-7 {
+        width: 58% !important;
+    }
+
+    .col-sg-8 {
+        width: 66.66666667%;
+    }
+
+    .col-sg-12 {
+        width: 100% !important;
+        float: none;
+    }
+
+    .col-sg-5 {
+        width: 42%;
+    }
+
+    .jbResultList .jbReserveDateFirst {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        margin: 5px 0px;
+    }
+}
+
+.jbResultGrid .col-sg-12 {
+    width: 100% !important;
+    float: none;
+}
+
+.jbResultGrid .bgImagesListHotel {
+    width: 100% !important;
+}
+
+.jbResultGrid .jbNameBoxList, .jbResultGrid .jbBoxPicAndTxtReesult {
+    width: 100% !important;
+}
+
+.divDiscountHotel {
+    position: absolute;
+    text-align: center;
+    background-color: #d41200;
+    color: #fff;
+    font-size: 15px;
+    right: 0px;
+    padding: 5px 10px;
+    z-index: 3;
+    top: 20px;
+}
+
+    .divDiscountHotel:before {
+        /*border-right: 10px solid transparent;
+        border-top: 7px solid #9c0c1e;
+        content: "";
+        height: 0;
+        right: 0;
+        position: absolute;
+        top: 100%;*/
+        /*width: 0;*/
+    }
+
+    .divDiscountHotel b {
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+.jbPlaceHolderHotel {
+    margin-bottom: 5px;
+    animation: fadeIn 2s infinite alternate;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    text-align: center;
+}
+
+    .jbPlaceHolderHotel img {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeInBox {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInBox {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInBox {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeInBox {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.jbResultList .jbTxtNotReserve span {
+    direction: ltr;
+    display: block;
+    float: left;
+    margin-right: 5px;
+}
+
+.jbResultGrid .jbTxtNotReserve span {
+    display: block;
+    font-size: 14px;
+}
+
+.jbResultList .jbAlertPrice {
+    display: block;
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 10px;
+    background-color: #F5EEE5;
+    margin-left: 5px;
+}
+
+.jbResultGrid .jbAlertPrice {
+    display: block;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 8px;
+    background-color: #F5EEE5;
+}
+
+.switch {
+    text-align: center;
+    width: 60px;
+    margin: 5px auto 0 auto;
+}
+
+    .switch .cmn-toggle {
+        position: absolute;
+        margin-left: -9999px;
+        visibility: hidden;
+    }
+
+        .switch .cmn-toggle + label {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            outline: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+    .switch input.cmn-toggle-round + label {
+        padding: 0px;
+        width: 60px;
+        height: 25px;
+        background-color: #A5A5A5;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+        border-radius: 0px;
+    }
+
+        .switch input.cmn-toggle-round + label:before, input.cmn-toggle-round + label:after {
+            display: block;
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            bottom: 1px;
+            content: "";
+        }
+
+        .switch input.cmn-toggle-round + label:before {
+            right: 1px;
+            background-color: #A9CFE2;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            -ms-border-radius: 0px;
+            -o-border-radius: 0px;
+            border-radius: 0px;
+            -webkit-transition: background 0.4s;
+            -moz-transition: background 0.4s;
+            -o-transition: background 0.4s;
+            transition: background 0.4s;
+        }
+
+        .switch input.cmn-toggle-round + label:after {
+            width: 28px;
+            background: rgba(245,245,245,1);
+            background: -moz-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 52%, rgba(245,245,245,1) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(245,245,245,1)), color-stop(52%, rgba(255,255,255,1)), color-stop(100%, rgba(245,245,245,1)));
+            background: -webkit-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 52%, rgba(245,245,245,1) 100%);
+            background: -o-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 52%, rgba(245,245,245,1) 100%);
+            background: -ms-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 52%, rgba(245,245,245,1) 100%);
+            background: linear-gradient(to right, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 52%, rgba(245,245,245,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#f5f5f5', GradientType=1 );
+            border-radius: 0px;
+            -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            -webkit-transition: margin 0.4s;
+            -moz-transition: margin 0.4s;
+            -o-transition: margin 0.4s;
+            transition: margin 0.4s;
+        }
+
+    .switch input.cmn-toggle-round:checked + label:before {
+        background-color: #5CB85C;
+    }
+
+    .switch input.cmn-toggle-round:checked + label:after {
+        margin-left: 30px;
+    }
+
+    .switch .inset-shadow {
+        /*background-image: url("images/bg_shadow.png");*/
+        background-position: center bottom;
+        background-repeat: repeat-x;
+        bottom: 0;
+        height: 50px;
+        padding: 3px 10px;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+.jbdescription {
+    padding: 3px 10px;
+}
+
+a.jbstartPrice.mobileMarginB10.jbTxtNotReserve:hover {
+    color: white;
+    background: #2284da;
+}
+
+@media all and (max-width: 700px) {
+    .btn-show-in-map {
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .mobileCenter {
+        text-align: center;
+    }
+
+        .mobileCenter span.icon {
+            float: none !important;
+            display: inline !important;
+        }
+}
+
+.btn-show-in-map {
+    border-color: #ffa000;
+    color: #ffa000;
+    background-color: white;
+    border-radius: 5px;
+    font-size: xx-small;
+    margin-right: 8px;
+    margin-top: 37px;
+}
+
+    .btn-show-in-map:hover {
+        border-color: #ffa000;
+        color: white;
+        background-color: #ffa000;
+        border-radius: 5px;
+    }
+
+.btn-show-in-ignore {
+    border-color: #e8121f;
+    color: #e8121f;
+    background-color: white;
+    border-radius: 5px;
+}
+
+    .btn-show-in-ignore:hover {
+        border-color: #e8121f;
+        color: white;
+        background-color: #e8121f;
+        border-radius: 5px;
+    }

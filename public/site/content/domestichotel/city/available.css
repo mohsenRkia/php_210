@@ -1,0 +1,390 @@
+﻿/*This line of style is because of hide elements that needs angular value . they have been shown after render angular*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+.dh-reserve-button {
+    width: 95%;
+    background-color: #69C0AC;
+    border: 2px solid #69C0AC;
+    border-radius: 5px;
+    color: white;
+}
+
+.dh-user-rating:after {
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 15px;
+    line-height: 1;
+    font-family: "TripAdvisor_Regular" !important;
+    -ms-transform: rotate(-0.001deg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    speak: none;
+}
+
+.dh-user-rating.bubble_5:after, .dh-user-rating.bubble_50:after {
+    content: "\e00b\e00b\e00b\e00b\e00b";
+}
+
+.dh-user-rating.bubble_45:after {
+    content: "\e00b\e00b\e00b\e00b\e00c";
+}
+
+.dh-user-rating.bubble_4:after, .dh-user-rating.bubble_40:after {
+    content: "\e00b\e00b\e00b\e00b\e00d";
+}
+
+.dh-user-rating.bubble_35:after {
+    content: "\e00b\e00b\e00b\e00c\e00d";
+}
+
+.dh-user-rating.bubble_3:after, .dh-user-rating.bubble_30:after {
+    content: "\e00b\e00b\e00b\e00d\e00d";
+}
+
+.dh-user-rating.bubble_25:after {
+    content: "\e00b\e00b\e00c\e00d\e00d";
+}
+
+.dh-user-rating.bubble_2:after, .dh-user-rating.bubble_20:after {
+    content: "\e00b\e00b\e00d\e00d\e00d";
+}
+
+.dh-user-rating.bubble_15:after {
+    content: "\e00b\e00c\e00d\e00d\e00d";
+}
+
+.dh-user-rating.bubble_1:after, .dh-user-rating.bubble_10:after {
+    content: "\e00b\e00d\e00d\e00d\e00d";
+}
+
+.dh-user-rating.bubble_5:after {
+    content: "\e00c\e00d\e00d\e00d\e00d";
+}
+
+.dh-user-rating.bubble_0:after, .dh-user-rating.bubble_00:after {
+    content: "\e00d\e00d\e00d\e00d\e00d";
+}
+
+.dh-user-rating:after {
+    color: #ff8200;
+}
+
+.dh-available-img-box-list-item {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.dh-available-img-box-grid-item {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+    .dh-available-img-box-grid-item img {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+.dh-btn-show-map-grid-item {
+    margin-top: 0;
+}
+
+.dh-hotel-discount {
+    background-color: #ffa500;
+    padding: 2px 1px;
+    width: 85px;
+    text-align: center;
+    z-index: 3;
+    font-size: 12px;
+    top: 10px;
+    color: #fff;
+    position: absolute;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.dh-hotel-visible-desktop {
+    display: block;
+}
+
+.dh-hotel-hidden-desktop,
+.dh-hotel-visible-xs {
+    display: none;
+}
+
+.dh-md-price-box {
+    margin-top: 12px;
+}
+
+.dh-show-map-btn {
+    border-color: #ffa000;
+    color: #ffa000;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 10px;
+    margin-top: 55px;
+    margin-right: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+}
+
+    .dh-show-map-btn:hover {
+        border-color: #ffa000;
+        color: white;
+        background-color: #ffa000;
+    }
+
+.jbResultGridNew .hotelsViewTag .jbBoxResultJa .dh-user-rating {
+    background-color: #F3F3F3;
+    padding: 2px 2px;
+    z-index: 3;
+    top: 10px;
+    color: #fff;
+    position: absolute;
+    direction: ltr;
+    left: 0;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    font-size: 14px;
+}
+
+.maxlist-more {
+    display: block;
+    padding: 10px 0 0 0;
+    margin: 0px;
+    text-align: center;
+    border-top: 1px solid #E3E3E3;
+}
+
+    .maxlist-more a {
+        font-size: 18px;
+        cursor: pointer;
+        color: #42c3ab;
+    }
+
+        .maxlist-more a:before {
+            content: attr(data-text);
+            position: absolute;
+            overflow: hidden;
+            max-width: 7em;
+            white-space: nowrap;
+            color: #fff;
+            animation: loading 8s linear;
+        }
+
+@keyframes loading {
+    0% {
+        max-width: 0;
+    }
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    color: #888a8a;
+}
+
+.dh-md-facility-box {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .hidden-after-1200 {
+        display: none !important;
+    }
+
+    .col-md-12.col-sm-12.rating.hidden-xs {
+        padding: 0 0 0 5px;
+    }
+
+    .dh-user-rating:after {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 990px) and (min-width: 500px) {
+    .dh-hotel-name-xs {
+        font-size: 18px;
+        color: #435456;
+        font-weight: 500;
+    }
+
+    .jbNameBoxList span.icon:before, .icon-facility .icon:before {
+        font-size: 18px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .jbNameBoxList span.icon {
+        margin: 0 2px;
+    }
+
+    .dh-md-price-box {
+        margin-top: 0;
+    }
+
+    .col-md-12.col-sm-12.rating.hidden-xs {
+        padding: 0 0 0 5px;
+    }
+
+    .dh-user-rating:after {
+        font-size: 12px;
+    }
+
+    .dh-md-facility-box {
+        margin-top: 10px;
+    }
+
+    .dh-show-map-btn {
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .iw-hotel.iw-structured {
+        width: 270px;
+        position: relative;
+    }
+
+    .jbFilterBox {
+        padding: 0 10px;
+    }
+
+    .dh-hotel-hidden-desktop,
+    .dh-hotel-visible-xs {
+        display: block;
+    }
+
+    .dh-hotel-visible-desktop {
+        display: none !important;
+    }
+
+    .dh-user-rating {
+        background-color: #F3F3F3;
+        padding: 2px 5px;
+        z-index: 3;
+        top: 10px;
+        color: #fff;
+        position: absolute;
+        direction: ltr;
+        left: 0;
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+
+    .dh-hotel-name-xs {
+        color: #435456;
+        font-weight: 600;
+        font-size: 15px;
+        display: inline;
+    }
+
+    .jbFilterMobile {
+        margin-bottom: 10px;
+    }
+
+    .dh-show-map-btn-xs {
+        border-color: #ffa000;
+        color: #ffa000;
+        background-color: white;
+        border-radius: 5px;
+        font-size: xx-small;
+        padding: 5px;
+    }
+
+        .dh-show-map-btn-xs:hover {
+            border-color: #ffa000;
+            color: white;
+            background-color: #ffa000;
+        }
+
+    #dh-filter-map-modal.modal,
+    #selected-city-modal .modal-content {
+        width: 100% !important;
+        height: 100% !important;
+        top: 40px;
+    }
+}
+
+
+.dh-collapse-city-info {
+    color: #00c6aa;
+    padding-bottom: 15px;
+    text-decoration: none;
+    outline: none;
+    font-size: 15px;
+}
+
+    .dh-collapse-city-info:hover,
+    .dh-collapse-city-info:focus,
+    .dh-collapse-city-info:active {
+        color: #00b297;
+        text-decoration: none;
+    }
+
+#about-city-wrapper h5 {
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+
+    #about-city-wrapper h5 i {
+        color: #00c6aa;
+    }
+
+    #about-city-wrapper h5 .dh-hidden {
+        display: none;
+    }
+
+#about-city {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    padding: 25px;
+    line-height: 25px;
+    font-size: 12px;
+}
+
+.certain-availability {
+    float: right;
+    padding: 10px 0 0;
+    font-size: 20px;
+    color: #00c6aa;
+}
+
+.jabama-green-color {
+    color: #00c6aa;
+}
+
+.no-pad {
+    padding: 0;
+}
+
+.jabama-logo-small {
+    width: 18px;
+    height: 15px;
+    background: url('../../images/common_css_sprites.png') -239px -55px;
+    margin-right: 7px;
+    float: left;
+}
+
+.is-special-wrapper {
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 1%, rgb(0,0,0) 99%, rgba(0,0,0,0.65) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgb(0,0,0) 99%,rgb(0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgb(0,0,0) 99%,rgba(0,0,0,0.65) 100%);
+}
+
+.is-special-img {
+    width: 140px;
+    height: 35px;
+    margin-right: 5px;
+    margin-top: 10px;
+}

@@ -1,0 +1,1606 @@
+html {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
+
+.jbSearchBoxHomeMain {
+    border-radius: 0px;
+    position: relative;
+    z-index: 2;
+}
+
+.jbBodySearchBoxHome {
+    background-color: rgba(242,242,242,0.85);
+    border: 0px solid #fff;
+    border-radius: 0px;
+    padding: 14px 25px 10px;
+}
+
+    .jbBodySearchBoxHome h1, .jbBodySearchBoxHome h2 {
+        margin: 0px 0px 10px 0px;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 10px;
+        display: block;
+        text-align: right;
+        direction: rtl;
+        font-size: 15px;
+        color: #7B7B7B;
+    }
+
+    .jbBodySearchBoxHome:after {
+        clear: both;
+    }
+
+.form-control {
+    text-align: right;
+    direction: rtl;
+}
+
+.jbSearchBoxHomeMain .nav-tabs > li {
+    float: right;
+    position: relative;
+    margin: 0px;
+}
+
+    .jbSearchBoxHomeMain .nav-tabs > li > a {
+        background: rgba(242, 242, 242, 0.7) none repeat scroll 0 0;
+        border-radius: 0px;
+        margin-right: 0px;
+        margin-left: 3px;
+        color: #000;
+        direction: rtl;
+    }
+
+    .jbSearchBoxHomeMain .nav-tabs > li > span {
+        display: block;
+        position: absolute;
+        left: -7px;
+        top: 3px;
+        background-color: #d41200;
+        padding: 0px 3px;
+        font-size: 11px;
+        color: #fff;
+        z-index: 2000;
+    }
+
+        .jbSearchBoxHomeMain .nav-tabs > li > span:before {
+            border-left: 10px solid transparent;
+            border-top: 7px solid #9c0c1e;
+            content: "";
+            height: 0;
+            left: 0;
+            position: absolute;
+            top: 100%;
+            width: 0;
+        }
+
+    .jbSearchBoxHomeMain .nav-tabs > li > a:hover {
+        background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+    }
+
+    .jbSearchBoxHomeMain .nav-tabs > li.active > a, .jbSearchBoxHomeMain .nav-tabs > li.active > a:focus, .jbSearchBoxHomeMain .nav-tabs > li.active > a:hover {
+        background: rgba(255, 255, 255, 0.85) none repeat scroll 0 0;
+        border-top: 1px solid #f7941e;
+    }
+
+.jbSearchBoxHomeMain .nav-tabs {
+    border-bottom: 0px;
+}
+
+/*---Coin Popup----*/
+
+.coin-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2147483638; /* Sit on top */
+    /*padding-top: 100px;*/ /* Location of the box */
+    left: 0;
+    text-align: center;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.coin-modal-content {
+    margin: auto;
+    display: block;
+    /*width: 80%;
+    max-width: 700px;*/
+    margin-top: 50px;
+    -webkit-animation-name: bounceInDown;
+    -webkit-animation-duration: 0.6s;
+    width: 100%;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0);
+    }
+
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* The Close Button */
+.coin-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .coin-modal-close:hover,
+    .coin-modal-close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .coin-modal-content {
+        /*width: 100%;*/
+    }
+
+
+    #defaultSearch .typeahead-list {
+        height: 250px;
+        overflow: auto;
+    }
+
+
+    .coin-modal-close {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    #defaultSearch .typeahead-list {
+        height: 355px;
+        overflow: auto;
+    }
+}
+/*---Norouz----*/
+.Norouz img {
+    margin-bottom: -30px;
+}
+
+/*---------InternationHotel---------*/
+.jb-rooms .jb-room-name {
+    color: #299dbe;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+    .jb-rooms .jb-room-name img {
+        margin-left: 10px;
+        transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+        -moz-transform: rotate(20deg);
+        -webkit-transform: rotate(20deg);
+        -o-transform: rotate(20deg);
+    }
+
+.jb-age-limit {
+    text-align: right;
+    direction: rtl;
+    position: absolute;
+    top: -60%;
+    right: 0;
+}
+
+    .jb-age-limit span {
+        padding-left: 5px;
+        color: #a94442;
+    }
+
+
+
+@media (min-width: 768px) {
+
+    .aLinkTopBanner .jbBannerName {
+        font-size: 25px;
+    }
+
+    .jbBoxTourHome {
+        border-left: 1px solid #eee;
+    }
+
+        .jbBoxTourHome:last-child {
+            border-left: 0px solid #eee;
+        }
+
+    .jbSearchBoxHomeMain {
+        margin: 80px auto 0px auto;
+        width: 880px;
+    }
+
+    .jbSearchBoxHome {
+        height: 400px;
+        width: 100%;
+        position: absolute;
+    }
+
+    .carousel, .carousel .item {
+        /*min-height: 360px;*/
+        -webkit-transition: height 1s ease;
+        -moz-transition: height 1s ease;
+        -o-transition: height 1s ease;
+        -ms-transition: height 1s ease;
+        transition: height 1s ease;
+    }
+
+    .jbNightCount {
+        border-radius: 0px;
+        color: #000;
+        padding: 3px 0px;
+        text-align: center;
+        direction: rtl;
+        background-color: #fff;
+        border: 1px solid #A5A5A5;
+        width: 127px;
+    }
+
+        .jbNightCount:before {
+            border-bottom: 9px solid #A5A5A5;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            top: -8px;
+            content: "";
+            position: absolute;
+            left: 29%;
+            right: 43%;
+        }
+
+        .jbNightCount:after {
+            border-bottom: 9px solid #FFF;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            top: -7px;
+            content: "";
+            position: absolute;
+            left: 29%;
+            right: 43%;
+        }
+
+    .dayssDav {
+        position: absolute;
+        top: 44px;
+    }
+
+    .dayssDav2 {
+        position: absolute;
+        top: 44px;
+    }
+
+    .dayssDavAndNight {
+        position: absolute;
+        top: 44px;
+    }
+
+    .jb-rooms .jb-btn-search-home, .jb-tour .jb-btn-search-home {
+        position: absolute;
+        bottom: 0px;
+        left: 10px;
+    }
+
+    .tour-warranty {
+        background: url("images/tour/tour-dad.png");
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 200px;
+        width: 198px;
+        z-index: 15;
+    }
+}
+
+
+@media (min-width: 770px) and (max-width: 1000px) {
+    .jbSearchBoxHomeMain {
+        width: 90% !important;
+    }
+}
+
+.bigBanner {
+    display: block;
+    border: 3px solid #fff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.bigBanner-mob {
+    display: none;
+    margin-top: 20px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .jbSearchBoxHomeMain .nav-tabs > li > a {
+        padding: 10px 5px !important;
+        font-size: 13px;
+    }
+
+    .aLinkTopBanner .jbBannerName {
+        font-size: 18px;
+    }
+
+    .jbBoxTourHome {
+        border-bottom: 1px solid #eee;
+    }
+
+        .jbBoxTourHome:last-child {
+            border-bottom: 0px solid #eee;
+        }
+
+    .jbSearchBoxHome {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .jaDateInOut > div.right {
+        text-align: center;
+    }
+
+    .jbNightCount {
+        border-radius: 0px;
+        color: #000;
+        padding: 6px 10px;
+        text-align: center;
+        direction: rtl;
+    }
+
+    /*.jbNightCount:before {
+            border-bottom: 9px solid #A5A5A5;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            top: -8px;
+            content: "";
+            position: absolute;
+            left: 43%;
+            right: 43%;
+        }*/
+
+    /*.jbNightCount:after {
+            border-bottom: 9px solid #FFF;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            top: -7px;
+            content: "";
+            position: absolute;
+            left: 43%;
+            right: 43%;
+        }*/
+
+    .dayssDav {
+        position: relative;
+    }
+
+    .jbSearchBoxHomeMain {
+        margin: 0 auto;
+    }
+
+    .jbSearchBoxHome {
+        margin: 0px 10px;
+    }
+
+    .jaDateInOut > div.right {
+        text-align: center;
+    }
+
+    .carousel-inner, .carousel-indicators {
+        display: none;
+    }
+
+    .carousel.slide {
+        background-image: url("images/home/bg/6.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 40px 0px;
+    }
+
+    .input-group-addon {
+        padding: 9px 12px;
+    }
+
+    .jb-landingpages {
+        width: 114px;
+    }
+
+    .bigBanner {
+        display: none;
+    }
+
+    .bigBanner-mob {
+        display: block;
+    }
+
+    .various {
+        margin-bottom: 10px;
+    }
+
+    .jb-age-limit {
+        right: initial;
+        left: 0;
+        top: -70%;
+    }
+    /*---Norouz----*/
+    .Norouz img {
+        margin: 10px auto;
+    }
+
+    .tour-warranty {
+        background: url("images/tour/tour-dad-mobile.png");
+        background-repeat: no-repeat;
+        display: block;
+        height: 25px;
+        width: 290px;
+        margin: 10px auto;
+        z-index: 15;
+    }
+}
+
+.jaDateInOut .input-group {
+    width: 100%;
+}
+
+.btn-success {
+    background-image: none;
+    border: 1px solid #69C0AC;
+}
+
+.jbBodyPopularCity {
+    min-height: 100px;
+    padding-bottom: 15px;
+}
+
+    .jbBodyPopularCity .image-box .popup-gallery {
+        display: block;
+        height: 160px;
+        border-radius: 0px 0px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .jbBodyPopularCity .image-box .box > .details, .jbBodyPopularCity .image-box.box > .details {
+        padding: 12px 15px;
+    }
+
+    .jbBodyPopularCity .details .price {
+        color: #006498;
+        display: block;
+        float: left;
+        direction: rtl;
+        text-align: center;
+        font-size: 20px;
+        margin-top: -5px;
+    }
+
+    .jbBodyPopularCity .box {
+        background: #fff none repeat scroll 0 0;
+        text-align: left;
+        border-radius: 0px;
+        transition: all ease-in-out 0.4s;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+        padding: 3px;
+    }
+
+        .jbBodyPopularCity .box:hover {
+            box-shadow: 0 0 6px 0 rgba( 0, 0, 0, 0.4);
+            transition: all ease-in-out 0.4s;
+        }
+
+    .jbBodyPopularCity .box-title {
+        display: block;
+        padding: 0px;
+        margin: 0px;
+        font-size: 18px;
+    }
+
+        .jbBodyPopularCity .box-title a {
+            display: block;
+            text-align: right;
+            font-family: iransans,Tahomal;
+        }
+
+        .jbBodyPopularCity .box-title small {
+            color: #838383;
+            display: block;
+            font-size: 10px;
+            margin-top: 4px;
+            text-transform: uppercase;
+        }
+
+.jbOfferHotel {
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.jbNorouzHotel {
+    padding: 30px 0 40px;
+    background-color: #f9f9f9;
+    background-image: url('images/norouz/jabama-back-norooz-hotel-tile.png');
+}
+
+    .jbOfferHotel .box,
+    .jbNorouzHotel .box {
+        background: #fff none repeat scroll 0 0;
+        text-align: left;
+        border-radius: 3px;
+        /*padding: 3px;*/
+        transition: all ease-in-out 0.2s;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .jbOfferHotel .popup-gallery,
+    .jbNorouzHotel .popup-gallery {
+        height: 160px;
+        border-radius: 3px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+    }
+
+
+    .jbOfferHotel .box .details h3,
+    .jbNorouzHotel .box .details h3 {
+        margin: 0px;
+    }
+
+    .jbOfferHotel .details .price,
+    .jbNorouzHotel .details .price {
+        color: #00af86;
+        display: block;
+        text-align: left;
+        font-size: 17px;
+        direction: rtl;
+        /*border-bottom: 1px solid #DEDEDE;
+        border-top: 1px solid #DEDEDE;*/
+        margin-bottom: 10px;
+        padding: 3px 0px;
+    }
+
+    .jbOfferHotel .box-title small,
+    .jbNorouzHotel .box-title small {
+        color: #838383;
+        display: block;
+        font-size: 10px;
+        margin-top: 4px;
+        text-transform: uppercase;
+    }
+
+    .jbOfferHotel .price small,
+    .jbNorouzHotel .price small {
+        color: #aaaaaa;
+        display: block;
+        font-size: 13px;
+        float: right;
+        position: relative;
+        top: 3px;
+    }
+
+    .jbOfferHotel .image-box .box .box-title,
+    .jbOfferHotel .image-box.box .box-title,
+    .jbNorouzHotel .image-box .box .box-title,
+    .jbNorouzHotel .image-box.box .box-title {
+        color: #2d3e52;
+        margin-bottom: 10px;
+        display: block;
+        font-size: 18px;
+        direction: rtl;
+        text-align: right;
+        color: #646464;
+        font-family: iransans,Tahomal;
+    }
+
+    .jbOfferHotel .listing-style1.hotel .feedback,
+    .jbOfferHotel .listing-style1.cruise .feedback,
+    .jbNorouzHotel .listing-style1.hotel .feedback,
+    .jbNorouzHotel .listing-style1.cruise .feedback {
+        padding: 3px 10PX;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        height: 50px;
+        width: 100%;
+        /*background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.65) 99%, rgba(0,0,0,0.65) 100%);*/ /* FF3.6-15 */
+        background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 1%, rgb(0,0,0) 99%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgb(0,0,0) 99%,rgb(0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgb(0,0,0) 99%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+    }
+
+    .jbOfferHotel .feedback .starName,
+    .jbNorouzHotel .feedback .starName {
+        float: left;
+        position: relative;
+        top: 17px;
+    }
+
+    .jbOfferHotel .feedback,
+    .jbNorouzHotel .feedback {
+        text-align: left;
+        direction: rtl;
+        color: #9e9e9e;
+    }
+
+.jbIntroduction {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    /*direction: rtl;*/
+    height: auto;
+}
+
+div.jbIntroduction div.discription h2 {
+    color: #646464;
+    padding-bottom: 15px;
+    font-size: 18pt;
+    font-weight: normal;
+}
+
+    div.jbIntroduction div.discription h2.mini {
+        font-size: 13pt;
+    }
+
+
+div.jbIntroduction div.discription p {
+    text-align: justify !important;
+    color: #949494;
+    font-size: 13PX;
+}
+
+.dh-news-read-more-btn {
+    position: absolute;
+    left: 4%;
+    text-decoration: none;
+}
+
+    .dh-news-read-more-btn a {
+        color: #69C0AC;
+    }
+
+article .details p:not(.dh-news-read-more-btn) {
+    color: #646464 !important;
+}
+
+.jbOfferHotel .box:hover,
+.jbNorouzHotel .box:hover {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.jbWhy {
+    background-color: #767E95;
+    background-image: url(images/bg_step.jpg);
+    background-position: center center;
+    background-repeat: repeat;
+    min-height: 100px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+    .jbWhy .features img {
+        border: 5px solid #fff;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        background-color: #767E95;
+    }
+
+        .jbWhy .features img:hover {
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+        }
+
+    .jbWhy .features {
+        color: #fff;
+    }
+
+        .jbWhy .features a {
+            color: #fff;
+            font-family: iransans,Tahomal;
+        }
+
+            .jbWhy .features a:hover {
+                color: #FFC076;
+            }
+
+            .jbWhy .features a h5 {
+                font-weight: 400;
+                font-size: 13px;
+            }
+
+.jbArticleBox .box {
+    background: #fff none repeat scroll 0 0;
+    text-align: left;
+    border-radius: 0px;
+    margin-bottom: 20px;
+    direction: rtl;
+    text-align: right;
+}
+
+
+.jbArticleBox {
+    background-color: white;
+    padding: 40px 0;
+}
+
+    .jbArticleBox img {
+        float: right;
+        margin-left: 10px;
+        max-width: 150px;
+        border-radius: 0px;
+    }
+
+.image-box .box > .details, .image-box.box > .details {
+    padding: 10px;
+    text-align: justify;
+}
+
+.jbArticleBox .image-box .box > .details, .image-box.box > .details {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 3px 3px 3px 12px;
+}
+
+.details.dh-news-box {
+    padding: 0 !important;
+    border-radius: 3px !important;
+}
+
+    .details.dh-news-box b {
+        color: #646464;
+        font-size: 18px;
+        margin: 10px 0;
+        display: block;
+        font-weight: 500;
+    }
+
+.dh-news-text {
+    padding: 0 15px 0 10px !important;
+}
+
+.dh-right-border-radius {
+    border-bottom-right-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+}
+
+.jbArticleBox .details a {
+    font-family: iransans,Tahomal;
+    /*color: #646464;*/
+}
+
+    .jbArticleBox .details a:hover {
+        color: #646464;
+    }
+
+.fill {
+    min-height: 380px;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    /*-webkit-filter: blur(1px);-ms-filter: blur(1px);-moz-filter: blur(1px);filter: blur(1px);*/
+    background-image: url('images/home/bg/9.png');
+    padding: 20px 0 50px 0;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.jbBodyPopularCity .price small {
+    color: #838383;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.animated {
+    height: 160px;
+}
+
+    .animated a {
+        display: none;
+    }
+
+.fadeInDown {
+    background: rgba(255, 255, 255, 0.6) none repeat scroll 0 0;
+    display: block !important;
+    border-top: 0;
+    color: #666;
+    border-radius: 10px;
+    -moz-animation-name: dropHeader;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in;
+    -webkit-animation-name: dropHeader;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in;
+    animation-name: dropHeader;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+}
+
+@-moz-keyframes dropHeader {
+    0% {
+        -moz-transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        -moz-transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes dropHeader {
+    0% {
+        -webkit-transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes dropHeader {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.owl-item .item {
+    padding: 10px;
+}
+
+@media (max-width: 760px) {
+    .aLinkBanner img {
+        width: 100%;
+        margin-top: 15px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media (min-width: 770px) {
+    .divBanner {
+        position: relative;
+        margin-bottom: 23px;
+    }
+}
+
+.jbAritcleHome p {
+    font-size: 13px;
+}
+
+.divDiscountHotel {
+    background-color: #ffa500;
+    border-radius: 0px;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 37px;
+    z-index: 1;
+    direction: rtl;
+}
+
+.jbNorouzHotel .divDiscountHotel {
+    background-color: #a465fe;
+}
+
+.divDiscountHotel:before {
+    border-right: 10px solid transparent;
+    border-top: 7px solid #ff8200;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 0;
+}
+
+.jbNorouzHotel .divDiscountHotel:before {
+    border-top: 7px solid #5d4f80;
+}
+
+.divDiscountHotelLeft {
+    background-color: #EA5045;
+    border-radius: 0px;
+    color: #fff;
+    font-size: 18px;
+    padding: 0px 10px 0px 10px;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    top: 10px;
+    z-index: 1;
+    direction: rtl;
+}
+
+    .divDiscountHotelLeft:before {
+        border-left: 10px solid transparent;
+        border-top: 7px solid #9c0c1e;
+        content: "";
+        height: 0;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 0;
+    }
+
+    .divDiscountHotelLeft .jbSpanArowMenu:after {
+        border-right: 9px solid transparent;
+        border-top: 27px solid #EA5045;
+        content: " ";
+        height: 0;
+        position: absolute;
+        right: -9px;
+        top: 0;
+        width: 0;
+    }
+
+.divDiscountHotelLabel {
+    background-color: #EA5045;
+    border-radius: 0px;
+    color: #fff;
+    font-size: 13px;
+    padding: 0px 2px 0px 5px;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    top: -5px;
+    z-index: 1;
+    direction: rtl;
+}
+
+    .divDiscountHotelLabel:before {
+        border-left: 10px solid transparent;
+        border-top: 7px solid #9c0c1e;
+        content: "";
+        height: 0;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 0;
+    }
+
+    .divDiscountHotelLabel .jbSpanArowMenu:after {
+        border-right: 9px solid transparent;
+        border-top: 19px solid #EA5045;
+        content: " ";
+        height: 0;
+        position: absolute;
+        right: -9px;
+        top: 0;
+        width: 0;
+    }
+
+.header-label-tag {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: -4px;
+    left: -1px;
+    float: left;
+}
+
+.header-label-tag-package {
+    background: url('images/first-sprite.png') -309px -53px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -4px;
+    left: -1px;
+    float: left;
+}
+
+.DivForeignHotelNewLabel {
+    content: url("images/home/new.png");
+}
+
+.tabPanel li {
+    margin-left: 3px !important;
+}
+
+.jbArrow {
+    background-color: #BB15A9;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    position: absolute;
+    left: 47%;
+    right: 47%;
+    bottom: -15px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+    .jbArrow:hover {
+        background-color: #960887;
+    }
+
+    .jbArrow .fa {
+        font-size: 26px;
+        position: relative;
+        top: 2px;
+        color: #fff;
+    }
+
+.jbSpanAlertPlaceType, .jbSpanAlertFromTour, .jbSpanAlertToTour, .Alert-International-Hotel {
+    display: none;
+    text-align: right;
+    color: #ff0000;
+    margin-top: 5px;
+    font-size: x-small;
+}
+
+.jbSearchBoxHomeRtl {
+    direction: ltr;
+    text-align: right;
+}
+
+.jbNightCountHome {
+    position: relative;
+}
+
+.jb-landingpages {
+    float: right;
+    max-width: 146px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 0px;
+    border: 4px solid #fff;
+}
+
+.aLinkBanner {
+    direction: rtl;
+    text-align: right;
+}
+
+    .aLinkBanner:focus {
+        text-decoration: none;
+    }
+
+    .aLinkBanner .jbSpanBanImg {
+        border: 3px solid #fff;
+        transition: all ease-in-out 0.5s;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+        display: block;
+        background-size: contain !important;
+        min-height: 140px;
+        background-color: #fff !important;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+
+        .aLinkBanner .jbSpanBanImg:hover {
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+            transition: all ease-in-out 0.3s;
+        }
+
+    .aLinkBanner .jbBannerName {
+        display: block;
+        padding: 0px 10px 0px 0px;
+        font-family: iransans,Tahomal;
+        color: #184286;
+        font-size: 18px;
+        z-index: 1;
+        position: relative;
+        text-shadow: 1px 1px #fff;
+    }
+
+    .aLinkBanner .jbBannerOffer {
+        display: block;
+        font-size: 12px;
+        background: #CFDBEB;
+        padding: 5px 10px 5px 10px;
+        float: right;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .aLinkBanner .jbBackShadow {
+        background-image: url("images/bg_shadow.png");
+        background-position: center bottom;
+        background-repeat: repeat-x;
+        display: block;
+        position: absolute;
+        width: 150px;
+        height: 50px;
+        left: 13px;
+        bottom: 3px;
+    }
+
+    .aLinkBanner .jbBannerOffer span:after {
+        border-left: 9px solid transparent;
+        border-bottom: 27px solid #CFDBEB;
+        content: " ";
+        height: 0;
+        position: absolute;
+        left: -9px;
+        top: 0;
+        width: 0;
+    }
+
+    .aLinkBanner .jbBannerOffer:after {
+        clear: both;
+    }
+
+    .aLinkBanner .jbBannerMotto {
+        font-size: 12px;
+        color: #7E7E7E;
+        padding: 0px 10px 0px 0px;
+        margin-bottom: 7px;
+        display: block;
+        z-index: 1;
+        position: relative;
+        text-shadow: 1px 1px #fff;
+    }
+
+    .aLinkBanner .jsStarBannerHome {
+        position: absolute !important;
+        left: 22px;
+        bottom: 13px;
+        top: auto;
+    }
+
+    .aLinkBanner .leftRaw {
+        display: block;
+        left: 0px;
+        position: absolute;
+        top: 0;
+    }
+
+        .aLinkBanner .leftRaw:after {
+            border-bottom: 137px solid #fff;
+            border-left: 48px solid transparent;
+            content: " ";
+            height: 0;
+            position: absolute;
+            left: 144px;
+            top: 0;
+            width: 0;
+        }
+
+    .aLinkBanner .jbButReserv {
+        display: block;
+        float: right;
+        padding: 3px 10px 3px 50px;
+        font-family: iransans,Tahomal;
+        font-size: 12px;
+        background-color: #69c0ac;
+        color: #fff;
+        margin-right: 10px;
+        border: 1px solid #69c0ac;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);
+        background-image: url("images/bg_arrow_but.png");
+        background-position: left center;
+        background-repeat: no-repeat;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+    }
+
+        .aLinkBanner .jbButReserv:hover {
+            background-color: #5aaf9b;
+            border: 1px solid #5aaf9b;
+        }
+
+
+
+
+.aLinkTopBanner {
+    direction: rtl;
+    text-align: right;
+    background-color: #fff;
+    border: 3px solid #fff;
+    transition: all ease-in-out 0.5s;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+    .aLinkTopBanner:hover {
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+        transition: all ease-in-out 0.3s;
+    }
+
+    .aLinkTopBanner:focus {
+        text-decoration: none;
+    }
+
+    .aLinkTopBanner .jbSpanBanTopImg {
+        display: block;
+        min-height: 122px;
+        text-align: left;
+        background-position: right center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .aLinkTopBanner .jbBannerName {
+        display: block;
+        padding: 5px 5px 0px 0px;
+        font-family: iransans,Tahomal;
+        color: #184286;
+    }
+
+    .aLinkTopBanner .jbBannerOffer {
+        display: block;
+        font-size: 12px;
+        background: #CFDBEB;
+        padding: 5px 10px 5px 10px;
+        float: right;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .aLinkTopBanner .jbBackShadow {
+        background-image: url("images/bg_shadow.png");
+        background-position: center bottom;
+        background-repeat: repeat-x;
+        display: block;
+        position: absolute;
+        width: 150px;
+        height: 50px;
+        left: 13px;
+        bottom: 3px;
+    }
+
+    .aLinkTopBanner .jbBannerOffer span:after {
+        border-left: 9px solid transparent;
+        border-bottom: 27px solid #CFDBEB;
+        content: " ";
+        height: 0;
+        position: absolute;
+        left: -9px;
+        top: 0;
+        width: 0;
+    }
+
+    .aLinkTopBanner .jbBannerOffer:after {
+        clear: both;
+    }
+
+    .aLinkTopBanner .jbBannerMotto {
+        font-size: 14px;
+        color: #7E7E7E;
+        padding: 0px 5px 0px 0px;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .aLinkTopBanner .jsStarBannerHome {
+    }
+
+    .aLinkTopBanner .jbButReserv {
+        display: block;
+        float: right;
+        padding: 3px 10px 3px 50px;
+        font-family: iransans,Tahomal;
+        font-size: 16px;
+        background-color: #69c0ac;
+        color: #fff;
+        margin-right: 5px;
+        border: 1px solid #69c0ac;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);
+        background-image: url("images/bg_arrow_but.png");
+        background-position: left center;
+        background-repeat: no-repeat;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+    }
+
+        .aLinkTopBanner .jbButReserv:hover {
+            background-color: #5aaf9b;
+            border: 1px solid #5aaf9b;
+        }
+
+
+.hotel-intro {
+    margin-bottom: 7px;
+    transition: all ease-in-out 0.5s;
+}
+
+    .hotel-intro a img:hover {
+        box-shadow: 0 0 5px rgba(0,0,0,0.4);
+        transition: all ease-in-out 0.3s;
+    }
+
+.jbTourBanner {
+    background: #fff;
+    padding-bottom: 0px;
+    margin-bottom: 18px;
+    direction: rtl;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+    .jbTourBanner .jbTourItem {
+        display: block;
+        margin: 10px 0;
+        padding: 0px 0px 0px;
+        transition: all ease-in-out 0.3s;
+        text-decoration: none;
+    }
+
+.jbTourItem .title {
+    font-family: iransans,Tahomal;
+    font-size: 20px;
+    color: #6c6c6c;
+    transition: all ease-in-out 0.3s;
+    letter-spacing: 0px;
+}
+
+.jbTourItem {
+    position: relative;
+}
+
+.jbBoxTourHome:hover {
+    background-color: #fdfede;
+    transition: all ease-in-out 0.3s;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+    .jbBoxTourHome:hover .showTour {
+        background-color: #fff;
+    }
+
+.jbTourItem .thumb {
+    float: left;
+    padding-top: 2px;
+    width: 100px;
+    border: 4px solid #eee;
+    background-size: cover;
+    height: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    background-position: center center;
+}
+
+.tour-info .price {
+    color: #3cae94;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: all ease-in-out 0.3s;
+    margin-bottom: 10px;
+}
+
+    .tour-info .price .price-currency {
+        font-size: 12px;
+        letter-spacing: 0;
+    }
+
+    .tour-info .price .price-desc {
+        font-size: 12px;
+        color: #b0b0b0;
+        letter-spacing: 0;
+    }
+
+.tour-info .showTour {
+    display: block;
+    float: right;
+    color: #f7931d;
+    border: 1px solid #f7b676;
+    padding-left: 9px;
+}
+
+    .tour-info .showTour:hover {
+        background-color: #fff;
+    }
+
+.showTour i {
+    background: #f7b676;
+    padding: 6px 8px 6px 6px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+    .showTour i:after {
+        border-right: 9px solid transparent;
+        border-top: 26px solid #fff;
+        content: " ";
+        height: 0;
+        position: relative;
+        right: 6px;
+        top: 20px;
+        width: 0;
+    }
+
+    .showTour i:after {
+        border-right: 9px solid transparent;
+        border-top: 26px solid #fff;
+        content: " ";
+        height: 0;
+        position: relative;
+        right: 6px;
+        top: 20px;
+        width: 0;
+    }
+
+.showTour .text {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 2px;
+}
+
+.jbTourBanner .jbTitle {
+    border-bottom-color: #eeeded;
+    padding-bottom: 15px;
+}
+
+    .jbTourBanner .jbTitle span {
+        padding: 0 5px 7px;
+    }
+
+.jbMinusMargin {
+    margin-top: -33px;
+}
+
+#dh-trust-seal-images {
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.dh-trust-seal-images-item {
+    text-align: center;
+}
+
+.hasDatepicker {
+    font-size: 12px !important;
+}
+
+span#Train3kidsPerAdultAlert {
+    direction: rtl;
+    float: right;
+    color: #0600ff;
+}
+
+.select2-results i.fa.fa-plane, .select2 i.fa.fa-plane {
+    font: normal normal normal 14px/1 FontAwesome !important;
+    margin-left: 4px;
+    right: 95%;
+    position: sticky;
+}
+
+.select2-results i.fa.fa-train, .select2 i.fa.fa-train {
+    font: normal normal normal 14px/1 FontAwesome !important;
+    margin-left: 25px;
+    right: 90%;
+    position: sticky;
+}
+
+span#select2-AutoComplateTourFlighFrom-container i.fa.fa-train, span#select2-AutoComplateTourFlighFrom-container i.fa.fa-plane {
+    margin-top: 9px;
+}
+
+span#select2-AutoComplateTourFlighTo-container i.fa.fa-train, span#select2-AutoComplateTourFlighTo-container i.fa.fa-plane {
+    margin-top: 9px;
+}
+
+.dh-description {
+    line-height: 2em;
+}
+
+@media only screen and (width: 768px) {
+    .jbSearchBoxHome {
+        top: 100px;
+    }
+
+    #jabamaSlider {
+        padding: 200px 0;
+    }
+
+    .jbSearchBoxHomeMain .with-nav-tabs {
+        padding-right: 130px;
+    }
+
+    .dh-tour-search-button-wrapper {
+        width: 25%;
+    }
+}
+
+.sprite-room-icon {
+    float: right;
+    width: 9px;
+    height: 20px;
+    background: url('images/first-sprite.png') -363px -53px;
+    margin-left: 10px;
+    transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+}
+
+/*Prevent Jump Scrolling when Modal is opened*/
+body.modal-open {
+    overflow: visible;
+}
+
+.jbArticleBox .backgroundINH {
+    background-image: url('../International/Images/paralex.jpg');
+    min-height: 415px;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.recemmendation {
+    padding: 5px 10px;
+    position: absolute;
+    right: 5px;
+    text-align: center;
+    top: 10px;
+    z-index: 5;
+}
+@media all and (max-width: 700px) {
+    #InterNationalHotelSearch .typeahead-container:focus-within {
+        margin: -10px !important;
+    }
+    #InterNationalHotelSearch .INH_input:focus {
+        border-color: #42c3ab;
+    }
+    #tab4info .jbBodySearchBoxHome {
+        padding: 14px 15px 10px;
+    }
+    .INH_class_Datepicker {
+        top: 80px !important;
+        left: 0 !important;
+        width: 100% !important;
+        position: fixed !important;
+    }
+        .INH_class_Datepicker table {
+            font-size: 1.2em;
+        }
+       
+}
+.INH_class_Datepicker .ui-state-active, .INH_class_Datepicker .ui-widget-content .ui-state-active, .INH_class_Datepicker .ui-widget-header .ui-state-active {
+    border: 1px solid #42c3ab;
+    background-color: inherit !important;
+    color: #333 !important;
+}
+.INH_class_Datepicker table {
+    font-size: 1em;
+}
+
+.INH_class_Datepicker td {
+    padding: 5px 3px;
+}
+
+
+.other-accommodation {
+    background-color: #f9f9f9;
+}

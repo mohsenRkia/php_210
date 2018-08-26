@@ -1,0 +1,428 @@
+/*start mega menu part*/
+.dh-mega-menu-wrapper {
+    height: 15px;
+    position: relative;
+    background: #ffffff;
+    font-family: 'fontawesome', 'oswald', sans-serif;
+    /*border: 1px solid #000000;*/
+    border-bottom: none;
+}
+
+    .dh-mega-menu-wrapper ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .dh-mega-menu-wrapper a {
+        text-decoration: none;
+    }
+
+    .dh-mega-menu-wrapper > ul > li {
+        position: relative;
+        float: right;
+    }
+
+        .dh-mega-menu-wrapper > ul > li > a {
+            position: relative;
+            line-height: 60px;
+            padding: 0 20px;
+            color: #fff;
+            display: block;
+            transition: all .3s;
+        }
+
+            .dh-mega-menu-wrapper > ul > li > a:hover {
+                color: lightgray;
+            }
+
+        .dh-mega-menu-wrapper > ul > li.contact-menu > a:after,
+        .dh-mega-menu-wrapper > ul > li.mega-menu > a:after,
+        .dh-mega-menu-wrapper > ul > li.blogger-pos > a:after,
+        .dh-mega-menu-wrapper > ul > li.drop-down > a:after {
+            content: '\f0d7';
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .dh-mega-menu-wrapper > ul > li.mega-menu {
+            position: static;
+            width: 100%;
+        }
+
+            .dh-mega-menu-wrapper > ul > li.mega-menu .mega-menu-inner {
+                position: absolute;
+                padding-right: 10px;
+                border: 1px solid #ddd;
+                opacity: 0;
+                width: 100%;
+                overflow: auto;
+                top: -9999px;
+                right: -9999px;
+                background: #fff;
+                transition: opacity .3s;
+            }
+
+                .dh-mega-menu-wrapper > ul > li.mega-menu .mega-menu-inner ul {
+                    width: 31%;
+                    float: right;
+                    margin: 20px 1%;
+                }
+
+                    .dh-mega-menu-wrapper > ul > li.mega-menu .mega-menu-inner ul li a {
+                        display: block;
+                        padding: 10px;
+                        text-transform: uppercase;
+                        /*border-bottom: 1px solid #999;*/
+                        color: #222;
+                    }
+
+                    .dh-mega-menu-wrapper > ul > li.mega-menu .mega-menu-inner ul li:first-child {
+                        color: #69C0AC;
+                        padding: 0;
+                        margin: 20px 10px;
+                        display: block;
+                        font-size: 14px;
+                    }
+
+.mega-menu-inner ul li a {
+    cursor: pointer;
+}
+
+/*.dh-mega-menu-wrapper>ul>li.mega-menu:hover .mega-menu-inner {*/
+.dh-mega-menu-wrapper > ul > li.mega-menu .mega-menu-inner {
+    opacity: 1;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+}
+
+.dh-mega-menu-wrapper h3 {
+    font-size: 14px;
+}
+
+
+/*start home icons style part*/
+@font-face {
+    font-family: "home-icon";
+    src: url("../../fonts/home-icons/home-icon.eot");
+    src: url("../../fonts/home-icons/home-icond41d.eot?#iefix") format("embedded-opentype"), url("../../fonts/home-icons/home-icon.woff") format("woff"), url("../../fonts/home-icons/home-icon.ttf") format("truetype"), url("../../fonts/home-icons/home-icon.svg#home-icon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-icon]:before {
+    /*font-family: "untitled-font-3" !important;*/
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    /*font-family: "untitled-font-3" !important;*/
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hotel:before {
+    content: "\61";
+}
+
+.icon-airplan:before {
+    content: "\62";
+}
+/*end home icons style part*/
+
+.dh-search-btn {
+    background-color: #ffa500;
+    color: #fff;
+}
+
+    .dh-search-btn:hover {
+        background-color: #ff8200;
+        color: #fff !important;
+    }
+
+
+
+.dh-display-validation-error {
+    text-align: right;
+    padding: 0 10px;
+    color: #EA5045;
+}
+
+.dh-calendar-modal-validation-error {
+    text-align: right;
+    padding: 10px 0 0;
+    color: #EA5045;
+}
+/*home style*/
+@media screen and (min-width: 600px) {
+    .dh-icon-font {
+        display: none;
+    }
+}
+
+.dh-center-align {
+    text-align: center !important;
+}
+
+.dh-border-radius {
+    border-radius: 3px !important;
+}
+
+@media screen and (max-width: 600px) {
+    [data-domestic-hotel-home-search] .typeahead-list > li:not([data-search-group]) {
+        overflow-y: hidden;
+        padding-bottom: 5px;
+    }
+
+    [data-domestic-hotel-home-search] .typeahead-dropdown > li > a, .typeahead-list > li > a {
+        padding: 6px 6px;
+    }
+    
+    .dh-news-box h4 {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .mega-menu-inner {
+        max-height: 200px;
+        overflow-y: scroll !important;
+    }
+
+    .dh-mega-menu-wrapper > ul > li.mega-menu .mega-menu-inner ul {
+        width: 100%;
+        margin: 0 1%;
+    }
+
+    .dh-right-border-radius {
+        border-bottom-right-radius: 0px !important;
+    }
+
+    .jbOfferHotel,
+    .jbNorouzHotel,
+    .dh-icon-container img,
+    .dh-hidden-xs {
+        display: none !important;
+    }
+
+    .dh-home-title {
+        padding-bottom: 10px !important;
+    }
+
+    .jbArticleBox {
+        background-color: rgba(242, 242, 242, 0.85);
+        padding-top: 10px;
+    }
+
+    .dh-icon-font {
+        font-size: 14px;
+        color: #fc8e01;
+        padding: 5px;
+    }
+
+
+
+    /*.icon-text {
+        padding: 0 !important;
+    }*/
+
+    #jabamaSlider {
+        background-image: none !important;
+        background-color: #fff;
+        padding-bottom: 0px;
+    }
+
+    .dh-search-tab-item {
+        width: 100%;
+        margin-left: 3px !important;
+    }
+
+    li > .dh-search-tab-item {
+        border: 1px solid lightgrey !important;
+        border-bottom: none !important;
+    }
+
+    .jbBodySearchBoxHome {
+        background-color: #fdfdfd !important;
+    }
+
+    .dh-news-read-more-btn {
+        position: relative !important;
+        text-decoration: none;
+        text-align: left;
+        padding: 0 0 10px 0 !important;
+    }
+}
+
+/*calendar modal style*/
+.dh-calendar-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2147483638; /* Sit on top */
+    left: 0;
+    text-align: center;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+    top: 0;
+    width: 100%; /* Full width */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    text-align: center;
+    padding: 0 8px;
+}
+
+.dh-calendar-modal-content {
+    margin-top: 20%;
+    margin: auto;
+    display: block;
+    margin-top: 50px;
+    -webkit-animation-name: bounceInDown;
+    -webkit-animation-duration: 0.6s;
+    padding: 30px;
+    max-width: 500px;
+    width: 100% !important;
+    background-color: #F7F7F7;
+    margin: 30% auto 0 auto;
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+    .dh-calendar-modal-content [data-dh-selected-hotel] {
+        text-align: center;
+        color: #69C0AC;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .dh-calendar-modal-content a {
+        width: 40%;
+        margin-bottom: 10px;
+        position: relative;
+        border: 0px;
+        color: #fff;
+        text-shadow: 0 1px rgba(0,0,0,0.1);
+        margin-top: 17px;
+    }
+
+        .dh-calendar-modal-content a:hover {
+            border: 0px;
+            text-shadow: 0 1px rgba(0,0,0,0.3);
+        }
+
+    .dh-calendar-modal-content .dh-calendar-modal-content input {
+        height: 44px;
+        font-size: 16px;
+        width: 100%;
+        margin-bottom: 10px;
+        -webkit-appearance: none;
+        background: #fff;
+        border: 1px solid #d9d9d9;
+        border-top: 1px solid #c0c0c0;
+        padding: 0 8px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    .dh-calendar-modal-content input:hover {
+        border: 1px solid #b9b9b9;
+        border-top: 1px solid #a0a0a0;
+        -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+        -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+        box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .dh-calendar-modal-content p {
+        font-size: 14px !important;
+        line-height: 35px;
+    }
+
+[data-selected-hotel-image] {
+    width: 100%;
+    border-radius: 3px;
+    margin-bottom: 40px;
+}
+
+.dh-calendar-modal-content .close {
+    float: right !important;
+    left: 0 !important;
+}
+
+.owl-theme .owl-controls .owl-page span {
+    width: 8px;
+    height: 8px;
+}
+
+.dh-hidden {
+    visibility: hidden;
+}
+
+.dh-date-picker {
+    cursor: pointer !important;
+    background: white !important;
+    padding: 0 7px !important;
+    z-index: 0 !important;
+}
+
+
+.ribbon {
+  position: absolute;
+  left: -22px; top: -22px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+  transform: scale(0.5);
+}
+.ribbon span {
+  font-size: 13px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#dd0000 0%, #D60000 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; left: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #D60000;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #D60000;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #D60000;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #D60000;
+}

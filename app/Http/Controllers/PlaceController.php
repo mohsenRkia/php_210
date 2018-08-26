@@ -13,7 +13,6 @@ class PlaceController extends Controller
     protected $user;
     public function __construct(Places $places, Categories $categories,User $user)
     {
-        $this->middleware('auth');
         $this->places = $places;
         $this->category = $categories;
         $this->user = $user;

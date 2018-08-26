@@ -1,0 +1,32 @@
+﻿span.select2-selection.select2-selection--single {
+    -ms-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+
+.select2-container .select2-selection--single {
+    height: 33px !important;
+}
+
+.padding-T17 {
+    padding-top: 17px !important;
+}
+
+.padding-B17 {
+    padding-bottom: 17px !important;
+}
+
+.bala2Sal {
+    color: #f71e1e;
+}
+
+    .bala2Sal i.fa.fa-bell-o {
+        margin-left: 6px;
+    }
+
+.forceTop {
+    top: 64px;
+}
+#internationalFlighFromDate, #internationalFlighToDate {
+    background-color: #fff !important;
+    cursor: pointer !important;
+}

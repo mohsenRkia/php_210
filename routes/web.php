@@ -11,14 +11,59 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * ROUTES OF SITE
+ */
+
+Route::get('/', [
+    'uses' => 'HomeController@index',
+    'as' => 'home.index'
+]);
+
+Route::group(['prefix' => 'place'],function (){
+
+    Route::get('/{id}', [
+        'uses' => 'HomeController@show',
+        'as' => 'place.show'
+    ]);
+
 
     /**
-     * ROUTING OF DASHBOARD
+     * ROUTES OF ORDERS
      */
-    Route::group(['prefix' => 'admin'],function (){
+    Route::get('order/{id}',[
+        'uses' => 'OrderController@first',
+        'as' => 'order.first'
+    ]);
+
+    Route::post('order/{id}',[
+        'uses' => 'OrderController@submit',
+        'as' => 'order.submit'
+    ]);
+    Route::post('finall',[
+        'uses' => 'OrderController@finall',
+        'as' => 'order.finall'
+    ]);
+
+});
+    /**
+    * ROUTES OF PROFILE PAGES
+    */
+
+    Route::group(['prefix' => 'profile','middleware' => 'iscostumer'],function (){
+
+        Route::get('/index' , [
+            'uses' => 'ProfileController@index',
+            'as' => 'profile.index'
+        ]);
+    });
+
+
+    /**
+     * ROUTES OF ADMIN PAGES
+     */
+    Route::group(['prefix' => 'admin','middleware' => 'isadmin'],function (){
+
 
     Route::get('dashboard',[
         'uses' => 'AdminpanelController@index',
@@ -26,7 +71,7 @@ Route::get('/', function () {
     ]);
 
     /**
-     * ROUTING OF CATEGORIS
+     * ROUTES OF CATEGORIS
      */
     Route::get('category',[
         'uses' => 'CategoryController@index',
@@ -58,7 +103,7 @@ Route::get('/', function () {
         'as' => 'category.destroy'
     ]);
         /**
-         * ROUTING OF PLACES
+         * ROUTES OF PLACES
          */
         Route::get('place',[
             'uses' => 'PlaceController@index',
@@ -86,14 +131,14 @@ Route::get('/', function () {
         ]);
 
         /**
-         * ROUTING OF ...
+         * ROUTES OF ...
          */
 
 
 
 });
 /**
- * ROUTING OF AUTHENTICATION
+ * ROUTES OF AUTHENTICATION
  */
 Auth::routes();
 

@@ -2,18 +2,20 @@
 
 namespace App\Models;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Orders extends Model
 {
+    protected $guarded = ["id"];
     public function place()
     {
         return $this->belongsTo(Places::class);
     }
 
-    public function costumer()
+    public function user()
     {
-        return $this->belongsTo(Costumers::class);
+        return $this->belongsTo(User::class);
     }
 
     public function guests()

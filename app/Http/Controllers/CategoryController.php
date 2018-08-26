@@ -12,7 +12,6 @@ class CategoryController extends Controller
 
     public function __construct(Categories $category)
     {
-        $this->middleware('auth');
         $this->category = $category;
     }
     /**

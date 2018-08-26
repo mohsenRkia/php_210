@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -35,16 +35,16 @@
 
 <section id="container" class="">
     <!--header start-->
-    @include('admin.lauout.menu.top')
-    <!--header end-->
+@include('admin.lauout.menu.top')
+<!--header end-->
     <!--sidebar start-->
     <aside>
         @include('admin.lauout.menu.right')
     </aside>
     <!--sidebar end-->
     <!--main content start-->
-    @yield('maincontent')
-    <!--main content end-->
+@yield('maincontent')
+<!--main content end-->
 </section>
 
 <!-- js placed at the end of the document so the pages load faster -->

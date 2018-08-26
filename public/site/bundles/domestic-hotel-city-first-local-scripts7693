@@ -1,0 +1,724 @@
+/* Minification failed. Returning unminified contents.
+(698,56-59): run-time error JS1306: Invalid numeric literal: 059
+ */
+var app = angular.module("myApp", ["ngRoute", "ngStorage", "ngMap", "rzModule"]);
+
+var version_cache = 1.7;
+
+app.config(['$routeProvider', '$httpProvider', '$locationProvider', function ($routeProvider, $httpProvider, $locationProvider) {
+
+    $routeProvider
+        .when("/city/:url-key", {
+            cache: false,
+            controller: "hotelCityController",
+            reloadOnSearch: false
+        })
+
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+    });
+
+    $httpProvider.defaults.timeout = 60000;
+
+}]);
+
+app.directive('onFinishRender', ['$timeout', function ($timeout) {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attr) {
+            if (scope.$last === true) {
+                scope.$eval(attr.onFinishRender);
+            }
+        }
+    }
+}]);
+
+app.directive('elemReady',
+[
+    '$parse', function($parse) {
+        return {
+            restrict: 'A',
+            link: function($scope, elem, attrs) {
+                elem.ready(function() {
+                    $scope.$apply(function() {
+                        var func = $parse(attrs.elemReady);
+                        func($scope);
+                    });
+                });
+            }
+        }
+    }
+]);
+
+$(window).load(function () {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 500);
+});
+/**
+ * Check `PlaceCategoryKey` and set if place is private room or not
+ * @param {object} place Place information
+ */
+function isHotelBase(place) {
+    place.isHotel = false;
+    // rental type
+    place.RentalType = place.Profile && place.Profile.AccomodationSpace && place.Profile.AccomodationSpace.RentalType || 1;
+    place.Url = place.Url + window.location.search
+    switch (place.PlaceCategoryKey) {
+        case "hotel":
+        case "hotel-aparteman":
+            place.isHotel = true;
+        case "karvansara":
+        case "motel":
+        case "mehmansara":
+        case "complex":
+        case "boomgardi":
+        case "hostel":
+            place.isHotelBase = true;
+            return place;
+        case "Villa":
+        case "Suite":
+        case "Apartment":
+        case "cottage":
+        case "rural":
+        default:
+            place.isHotelBase = false;
+            return place;
+    }
+}
+app.controller("hotelCityController", ['$scope', '$filter', 'NgMap', function ($scope, $filter, NgMap) {
+    $scope.vm = this;
+    $scope.HotelList = hotelList.searchResultRowViewModelList.map(isHotelBase);
+
+    $scope.imageBaseUrl = imageBaseUrl;
+    $scope.PageInfo = pageInfo;
+    $scope.filterSearch = "";
+    $scope.data = [];
+    $scope.FilterValue = "0";
+    $scope.data.loading = false;
+    $scope.pagingSize = 10;
+    $scope.rangeSlider = {
+        minValue: null,
+        maxValue: null
+    };
+    $scope.isAllStarChecked = true;
+    $scope.isAllPlaceCategoryChecked = true;
+    $scope.isOnlinePlacesChecked = false;
+
+    // acc
+    // only show hotel & hotel-apartman
+    $scope.hotelOnly = false;
+    $scope.rentalType = -1;
+    $scope.AccMaxCapacityList = [
+        { isChecked: true, min: 0, max: 1000, title: "همه" },
+        { isChecked: false, min: 1, max: 5, title: "1 تا 5 نفر" },
+        { isChecked: false, min: 6, max: 10, title: "6 تا 10 نفر" },
+        { isChecked: false, min: 11, max: 15, title: "11 تا 15 نفر" },
+        { isChecked: false, min: 16, max: 20, title: "16 تا 20 نفر" },
+        { isChecked: false, min: 21, max: 1000, title: "21 تا 5 نفر" }
+    ];
+    $scope.AccMaxCapacity = $scope.AccMaxCapacityList[0];
+    $scope.changeCapacity = function ($index) {
+        for (var $i in $scope.AccMaxCapacityList) {
+            $scope.AccMaxCapacityList[$i].isChecked = false;
+        }
+        $scope.AccMaxCapacityList[$index].isChecked = true;
+        $scope.AccMaxCapacity = $scope.AccMaxCapacityList[$index];
+    }
+    $scope.data.AreaList = [
+        { title: "شهری", key: "شهری", isChecked: false },
+        { title: "ساحلی", key: "ساحلی", isChecked: false },
+        { title: "جنگلی", key: "جنگلی", isChecked: false },
+        { title: "کوهستانی", key: "کوهستانی", isChecked: false },
+        { title: "کویری", key: "کویری", isChecked: false },
+        { title: "روستایی", key: "روستایی", isChecked: false },
+    ];
+    var ifAllAreaCategoryFalse = true;
+    $scope.isAllAreaCategoryChecked = true;
+    $scope.changeFilterAreaCategory = function () {
+        ifAllAreaCategoryFalse = true;
+        angular.forEach($scope.data.AreaList,
+            function (item) {
+                if (item.isChecked && item.key !== "all") {
+                    ifAllAreaCategoryFalse = $scope.isAllAreaCategoryChecked = false;
+                }
+            });
+        $scope.pagingSize = 10;
+    }
+    $scope.changeIsAllAreaCategoryFilter = function () {
+        if ($scope.isAllAreaCategoryChecked) {
+
+        } else {
+            angular.forEach($scope.data.AreaList,
+                function (item) {
+                        item.isChecked = false
+                });
+            $scope.isAllAreaCategoryChecked = true;
+            ifAllAreaCategoryFalse = true;
+        }
+    }
+
+    $scope.data.placeRulesFilter = [
+        { name: "SmokingAllowed", title: "امکان استعمال دخانیات", key: "SmokingAllowed", isChecked: false },
+        { name: "Reception24h", title: "پذیرش 24 ساعته", key: "Reception24h", isChecked: false },
+        { name: "PetsAllowed", title: "امکان ورود حیوانات خانگی ", key: "PetsAllowed", isChecked: false },
+        { name: "PartiesAllowed", title: "امکان برگزاری مراسم", key: "PartiesAllowed", isChecked: false },
+        { name: "GoodForChildren", title: "مناسب برای کودکان و سالمندان", key: "GoodForChildren", isChecked: false }
+     ];
+    $scope.isAllRulesFilterChecked = true;
+    var ifAllRuleFalse = true;
+    $scope.changeFilterRulesFilter = function () {
+        ifAllRuleFalse = true;
+        angular.forEach($scope.data.placeRulesFilter,
+            function (item) {
+                if (item.isChecked && item.key !== "all") {
+                    ifAllRuleFalse = false;
+                }
+            });
+        $scope.changeIsAllRulesFilter()
+        $scope.pagingSize = 10;
+    }
+    $scope.changeIsAllRulesFilter = function () {
+        $scope.isAllRulesFilterChecked = ifAllRuleFalse;
+        $scope.pagingSize = 10;
+    }
+    $scope.changeIsAllRulesFilteryFilter = function (v) {
+        if ($scope.isAllRulesFilterChecked) {
+
+        } else {
+            angular.forEach($scope.data.placeRulesFilter,
+                function (item) {
+                    item.isChecked = false;
+                });
+            $scope.isAllRulesFilterChecked = true;
+            ifAllRuleFalse = true;
+        }
+    }
+
+
+    // end acc
+
+    $scope.data.hotelStarsFilter = [
+        { star: "s5", isChecked: false },
+        { star: "s4", isChecked: false },
+        { star: "s3", isChecked: false },
+        { star: "s2", isChecked: false },
+        { star: "s1", isChecked: false },
+        { star: "s0", isChecked: false }
+    ];
+
+    $scope.data.hotelUserRatingFilter = [
+        { hotelUserRatingFilter: 5.0, isChecked: false },
+        { hotelUserRatingFilter: 4.5, isChecked: false },
+        { hotelUserRatingFilter: 4.0, isChecked: false },
+        { hotelUserRatingFilter: 3.5, isChecked: false },
+        { hotelUserRatingFilter: 3.0, isChecked: false },
+        { hotelUserRatingFilter: 2.5, isChecked: false },
+        { hotelUserRatingFilter: 2.0, isChecked: false },
+        { hotelUserRatingFilter: 1.5, isChecked: false },
+        { hotelUserRatingFilter: 1.0, isChecked: false },
+        { hotelUserRatingFilter: 0.5, isChecked: false }
+    ];
+
+    $scope.data.placeCategoryFilter = [
+        { isHotelBase: true, isHotel: true, name: "hotel", title: "هتل", key: "hotel", isChecked: false },
+        { isHotelBase: true, isHotel: true, name: "hotel-aparteman", title: "هتل آپارتمان", key: "hotel-aparteman", isChecked: false },
+        { isHotelBase: false, isHotel: false, name: "Suite", title: "سوئیت", key: "Suite", isChecked: false },
+        { isHotelBase: false, isHotel: false, name: "Villa", title: "ویلا", key: "Villa", isChecked: false },
+        { isHotelBase: true, isHotel: false, name: "mehmansara", title: "مهمانسرا", key: "mehmansara", isChecked: false },
+        { isHotelBase: true, isHotel: false, name: "motel", title: "متل", key: "motel", isChecked: false },
+        { isHotelBase: true, isHotel: false, name: "boomgardi", title: "اقامتگاه بوم گردی", key: "boomgardi", isChecked: false },
+        { isHotelBase: true, isHotel: false, name: "complex", title: "مجتمع اقامتی", key: "complex", isChecked: false },
+        { isHotelBase: true, isHotel: false, name: "karvansara", title: "کاروانسرا", key: "karvansara", isChecked: false },
+
+        { isHotelBase: false, isHotel: false, name: "Apartment", title: "آپارتمان", key: "Apartment", isChecked: false },
+        { isHotelBase: false, isHotel: false, name: "cottage", title: "کلبه", key: "cottage", isChecked: false },
+        { isHotelBase: false, isHotel: false, name: "rural", title: "خانه روستایی", key: "rural", isChecked: false },
+        { isHotelBase: true, isHotel: false, name: "hostel", title: "هاستل", key: "hostel", isChecked: false }
+
+    ];
+    var ifAllPlaceCategoryFalse = true;
+    /*$scope.showStar = true;
+    $scope.changeFilterPlaceCategory = function () {
+        ifAllPlaceCategoryFalse = true;
+        var showStar = true;
+        angular.forEach($scope.data.placeCategoryFilter,
+            function (item) {
+                if (item.isChecked && item.key !== "all") {
+                    ifAllPlaceCategoryFalse = false;
+                }
+                if (item.isChecked && !item.isHotelBase) {
+                    
+                    showStar = false;
+                }
+            });
+        $scope.showStar = showStar;
+        $scope.changeIsAllPlaceCategoryFilter();
+        $scope.pagingSize = 10;
+    }*/
+    $scope.changeIsAllPlaceCategoryFilter = function () {
+        $scope.isAllPlaceCategoryChecked = ifAllPlaceCategoryFalse;
+        $scope.pagingSize = 10;
+    }
+
+
+
+    $(window).scroll(function () {
+
+        if ($("#loadMoreId").length) {
+
+            var hT = $('#loadMoreId').offset().top,
+                hH = $('#loadMoreId').outerHeight(),
+                wH = $(window).height(),
+                wS = $(this).scrollTop();
+            if (wS > (hT + hH - wH)) {
+
+                $scope.loadMoreOption();
+            }
+        }
+    });
+
+    $scope.SelectedMap = [];
+    $scope.vm.placeChanged = function () {
+        $scope.vm.place = this.getPlace();
+        $scope.vm.mapModal.setCenter($scope.vm.place.geometry.location);
+        $scope.SelectedMap.pos = $scope.vm.place.geometry.location;
+        $scope.SelectedMap.placeName = $scope.vm.place.address;
+        $scope.vm.mapModal.setZoom(15);
+    }
+
+    $scope.JabamaRecommandationSort = function () {
+        var hotels = $scope.HotelList;
+        for (i = 0; i < hotels.length; i++) {
+            if (hotels[i].Availability.MinPrice == 0) {
+                hotels[i].Priority = 0;
+            }
+        }
+        return hotels;
+    }
+
+    $scope.loadMoreOption = function () {
+        if ($scope.HotelList) {
+            if ($scope.pagingSize < ($scope.HotelList.length - 5)) {
+                $scope.pagingSize += 10;
+            } else {
+                $scope.pagingSize = $scope.HotelList.length;
+                $scope.loadMore = false;
+            }
+            $scope.$applyAsync();
+        }
+    }
+
+    var ifAllFalse = true;
+    $scope.changeFilter = function () {
+        ifAllFalse = true;
+        angular.forEach($scope.data.hotelStarsFilter,
+            function (item) {
+                if (item.isChecked && item.title !== "همه") {
+                    ifAllFalse = false;
+                }
+            });
+
+        $scope.changeIsAllStarFilter();
+        $scope.pagingSize = 10;
+    }
+    $scope.changeIsAllStarFilter = function () {
+        $scope.isAllStarChecked = ifAllFalse;
+        $scope.rentalType = ifAllFalse ? -1 : 1;
+        $scope.pagingSize = 10;
+    }
+    $scope.changeIsOnlinePlacesFilter = function () {
+        $scope.pagingSize = 10;
+    }
+    var ifAllUserRatingFalse = true;
+    $scope.changeFilterUserRating = function () {
+        ifAllUserRatingFalse = true;
+        angular.forEach($scope.data.hotelUserRatingFilter,
+            function (item) {
+                if (item.isChecked) {
+                    ifAllUserRatingFalse = false;
+                }
+            });
+        $scope.pagingSize = 10;
+    }
+
+    var ifAllPlaceCategoryFalse = true;
+    var isPriveRoomCategories = true;
+    $scope.isPriveRoomCategories = true;
+    $scope.showStar = true;
+    $scope.changeFilterPlaceCategory = function () {
+        ifAllPlaceCategoryFalse = true;
+        isPriveRoomCategories = true;
+        var showStar = true;
+
+        angular.forEach($scope.data.placeCategoryFilter,
+            function (item) {
+                if (item.isChecked && item.key !== "all") {
+                    ifAllPlaceCategoryFalse = false;
+                    isPriveRoomCategories = isPriveRoomCategories && !item.isHotelBase
+                }
+                // change star filters visibility
+                if (item.isChecked && !item.isHotelBase) {
+                    showStar = false;
+                }
+            });
+        $scope.showStar = showStar;
+        $scope.changeIsAllPlaceCategoryFilter();
+        $scope.pagingSize = 10;
+    }
+    $scope.changeIsAllPlaceCategoryFilter = function () {
+        $scope.isAllPlaceCategoryChecked = ifAllPlaceCategoryFalse;
+        $scope.isPriveRoomCategories = !ifAllPlaceCategoryFalse && isPriveRoomCategories;
+        $scope.pagingSize = 10;
+    }
+
+    $scope.hotelFilter = function (element) {
+        var found = $filter('filter')($scope.data.hotelStarsFilter, { star: 's' + element.Star, isChecked: true }, true);
+        var foundhotelUserRating = $filter('filter')($scope.data.hotelUserRatingFilter, { hotelUserRatingFilter: element.TotalScore, isChecked: true }, true);
+        var foundPlaceCategory = $filter('filter')($scope.data.placeCategoryFilter, { key: element.PlaceCategoryKey, isChecked: true }, true);
+
+        var rentalTypeFilter = true;
+        if ($scope.rentalType == 0 || $scope.isPriveRoomCategories) { // rentalType == 0 === wholehouse sale
+            found = true; //ignore stars
+            var elementRules = element.Profile && element.Profile.AccomodationTerms || {};
+            var elementCapacity = element.Profile && element.Profile.AccomodationSpan && parseInt(element.Profile.AccomodationSpan.AccMaxCapacity) || 0
+
+            
+            var rentalFilterResult = $scope.rentalType == -1 || element.RentalType == $scope.rentalType;
+            var _capacity = $scope.AccMaxCapacity
+            var capcityFilter = elementCapacity >= _capacity.min && elementCapacity <= _capacity.max;
+
+            var foundArea = $filter('filter')($scope.data.AreaList, { key: element.Area, isChecked: true }, true);
+
+            // rule
+            var foundRule = true;
+            if (!ifAllRuleFalse) {
+                angular.forEach($scope.data.placeRulesFilter, function (rule) {
+                    if (rule.isChecked) {
+                        if (elementRules[rule.key] !== "on")
+                            foundRule = false;
+                    }
+                });
+            }
+
+            rentalTypeFilter = element.isHotelBase == false
+                && rentalFilterResult
+                && capcityFilter
+                && foundRule
+                && (foundArea.length > 0 || ifAllAreaCategoryFalse);
+        } else if ($scope.rentalType == 1) {
+            rentalTypeFilter = element.isHotelBase == true
+        }
+
+
+        var check = false;
+        var isOnline = false;
+        if (!$scope.isOnlinePlacesChecked)
+            isOnline = true;
+        else {
+            if (element.HasAnyCertainAvailability === $scope.isOnlinePlacesChecked) {
+                isOnline = true;
+            }
+        }
+
+        if (((element.isHotel && found.length > 0) || ifAllFalse || $scope.isAllStarChecked)
+            && (foundPlaceCategory.length > 0 || ifAllPlaceCategoryFalse)
+            && (rentalTypeFilter)
+            && (foundhotelUserRating.length > 0 || ifAllUserRatingFalse)) {
+            if (element.Availability.MinPrice >= $scope.rangeSlider.minValue &&
+                element.Availability.MinPrice <= $scope.rangeSlider.maxValue) {
+                if (isOnline)
+                    check = true;
+            }
+        }
+        return check;
+    }
+
+    $scope.selectedCityInfo;
+    $scope.ShowBigMap = function () {
+        NgMap.getMap({ id: 'dh-filter-map' }).then(function (response) {
+            $scope.vm.mapModal = response;
+            $('#dh-filter-map-modal')
+                .on('shown.bs.modal',
+                function (e) {
+                    google.maps.event.trigger($scope.vm.mapModal, 'resize');
+                });
+            $('#dh-filter-map-modal').modal('show');
+        });
+
+        var firstCity = $scope.HotelList[0];
+        window.setTimeout(function () {
+            google.maps.event.trigger($scope.vm.mapModal, 'resize');
+            $scope.vm.mapModal.setCenter(new google.maps.LatLng(firstCity.Latitude, firstCity.Longitude));
+            $('html, body').animate({
+                scrollTop: $(".fa-filter").offset().top - 80
+            }, 500);
+        }, 300);
+    }
+    $scope.hideMainMapBoxShow = false;
+    $scope.hideMainMapBox = function () {
+        $scope.hideMainMapBoxShow = false;
+    }
+    $scope.showCityInfo = function (data, city) {
+        $scope.vm.map.setZoom(14);
+        $scope.vm.map.setCenter(new google.maps.LatLng(city.Latitude, city.Longitude));
+        $scope.selectedCityInfo = city;
+    }
+    $scope.showCityInfoModal = function (data, city) {
+        $scope.vm.mapModal.setCenter(new google.maps.LatLng(city.Latitude, city.Longitude));
+        $scope.selectedCityInfo = city;
+        $scope.hideMainMapBoxShow = true;
+    }
+    $scope.sortFilter = function (value) {
+        if (value != null && value !== "") {
+            if (value === "0") {
+                $scope.HotelList = $scope.JabamaRecommandationSort();
+                $scope.HotelList.sort(function (a, b) {
+                    if (a.Priority > b.Priority) {
+                        return -1;
+                    }
+                    if (a.Priority < b.Priority) {
+                        return 1;
+                    }
+                    return 0;
+                });
+            }
+            if (value === "10") {
+                $scope.HotelList.sort(function (a, b) {
+                    if (a.TotalScore > b.TotalScore) {
+                        return -1;
+                    }
+                    if (a.TotalScore < b.TotalScore) {
+                        return 1;
+                    }
+                    return 0;
+                });
+            }
+            if (value === "1") {
+                $scope.HotelList.sort(function (a, b) {
+
+                    if (a.Availability.MinPrice === 0) {
+                        return 1;
+                    }
+                    else if (b.Availability.MinPrice === 0) {
+                        return -1;
+                    }
+                    else if (a.Availability.MinPrice === b.Availability.MinPrice) {
+                        return 0;
+                    }
+                    else {
+                        return a.Availability.BoardPrice < b.Availability.BoardPrice ? 1 : -1;
+                    }
+                });
+            }
+            if (value === "2") {
+                $scope.HotelList.sort(function (a, b) {
+
+                    if (a.Availability.MinPrice === 0) {
+                        return 1;
+                    }
+                    else if (b.Availability.MinPrice === 0) {
+                        return -1;
+                    }
+                    else if (a.Availability.MinPrice === b.Availability.MinPrice) {
+                        return 0;
+                    }
+                    else {
+                        return a.Availability.MinPrice < b.Availability.MinPrice ? -1 : 1;
+                    }
+                });
+            }
+            if (value === "3") {
+                $scope.HotelList.sort(function (a, b) {
+                    if (a.Availability.MinPrice === 0) {
+                        return 1;
+                    }
+                    else if (b.Availability.MinPrice === 0) {
+                        return -1;
+                    }
+                    else if (a.Availability.MinPrice === b.Availability.MinPrice) {
+                        return 0;
+                    }
+                    else {
+                        return a.Availability.MinPrice < b.Availability.MinPrice ? 1 : -1;
+                    }
+                });
+            }
+
+            if (value === "4") {
+                $scope.HotelList.sort(function (a, b) {
+                    if (a.Availability.MinPrice === 0) {
+                        return 1;
+                    }
+                    else if (b.Availability.MinPrice === 0) {
+                        return -1;
+                    }
+                    else if (a.Availability.MinPrice === b.Availability.MinPrice) {
+                        return 0;
+                    }
+                    else {
+                        return a.Star < b.Star ? -1 : 1;
+                    }
+                });
+            }
+
+            if (value === "5") {
+                $scope.HotelList.sort(function (a, b) {
+                    if (a.Availability.MinPrice === 0) {
+                        return 1;
+                    }
+                    else if (b.Availability.MinPrice === 0) {
+                        return -1;
+                    }
+                    else if (a.Availability.MinPrice === b.Availability.MinPrice) {
+                        return 0;
+                    }
+                    else {
+                        return a.Star < b.Star ? 1 : -1;
+                    }
+                });
+            }
+            $scope.$applyAsync();
+        }
+    }
+
+    $scope.SelectMapCity = {};
+    $scope.showModal = function (hotel) {
+        $scope.data.thoroughMap = [];
+        $scope.data.thoroughMap.push({
+            Latitude: hotel.Latitude,
+            Longitude: hotel.Longitude,
+            LatLon: hotel.Latitude + hotel.Longitude,
+            HotelStar: hotel.Star,
+            StartPrice: hotel.Availability.MinPrice,
+            HotelName: hotel.PlaceName,
+            Selected: true,
+            pos: [hotel.Latitude, hotel.Longitude]
+        });
+        $scope.data.thoroughMap[0].Selected = true;
+        $scope.data.SelectedMap = $scope.data.thoroughMap[0];
+        $scope.SelectMapCity = $scope.data.thoroughMap[0];
+
+        NgMap.getMap({ id: 'selected-city-map' }).then(function (response) {
+            $scope.vm.mapModal = response;
+            $('#selected-city-modal')
+                .on('shown.bs.modal',
+                function (e) {
+                    google.maps.event.trigger($scope.vm.mapModal, 'resize');
+                });
+            $('#selected-city-modal').modal('show');
+        });
+
+    }
+
+    $scope.initRzSlider = function () {
+        var maxPrise = 0;
+        var minPrise = 1000000000;
+        for (var i = 0; i < $scope.HotelList.length; i++) {
+            if (maxPrise < $scope.HotelList[i].Availability.MinPrice) {
+                maxPrise = $scope.HotelList[i].Availability.MinPrice;
+            }
+            if (minPrise > $scope.HotelList[i].Availability.MinPrice) {
+                minPrise = $scope.HotelList[i].Availability.MinPrice;
+            }
+        }
+        $scope.rangeSlider = {
+            minValue: minPrise,
+            maxValue: maxPrise + 10000,
+            options: {
+                floor: minPrise - 10000,
+                rightToLeft: true,
+                ceil: maxPrise + 10000,
+                step: 10000,
+                autoHideLimitLabels: false,
+                translate: function (e) { return $scope.translateNumber(e) },
+                onChange: function () {
+                    $scope.pagingSize = 10;
+                }
+            }
+        };
+    }
+
+    $scope.initRzSlider();
+    setTimeout(function () {
+        var numbersSpans = $('span[class="rz-bubble"]');
+        numbersSpans.show();
+        $.each(numbersSpans, function (index, value) {
+            $(value).css("left", $(value).position().left - 10);
+        });
+    }, 1000);
+
+    $scope.changeRzslider = function () {
+        $('span[class="rz-bubble"]').show();
+    }
+
+    $scope.translateNumber = function (e) {
+        e = Math.floor(e / 10000);
+        e = e.toString();
+        return e.replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
+    }
+
+    $scope.toggleData = function () {
+        if ($scope.hideshowSearch)
+            $scope.hideshowSearch = false;
+        else {
+            $scope.hideshowSearch = true;
+        }
+    }
+
+    $scope.toggleFilter = function () {
+        $('.jbFilterBox').toggle();
+        $scope.changeRzslider();
+    }
+
+    $scope.ignoreFilter = function () {
+        $scope.data.hotelStarsFilter = [
+            { star: "s5", isChecked: false },
+            { star: "s4", isChecked: false },
+            { star: "s3", isChecked: false },
+            { star: "s2", isChecked: false },
+            { star: "s1", isChecked: false },
+            { star: "s0", isChecked: false }
+        ];
+        $scope.data.onlinePlaceFilter = [
+            { title: "onlinePlace", isChecked: false }
+        ];
+        /*$scope.data.placeCategoryFilter = [
+            { name: "hotel", title: "هتل", key: "hotel", isChecked: false },
+            { name: "hotel-aparteman", title: "هتل آپارتمان", key: "hotel-aparteman", isChecked: false },
+            { name: "Suite", title: "سوئیت", key: "Suite", isChecked: false },
+            { name: "Villa", title: "ویلا", key: "Villa", isChecked: false },
+            { name: "mehmansara", title: "مهمانسرا", key: "mehmansara", isChecked: false },
+            { name: "motel", title: "متل", key: "motel", isChecked: false },
+            { name: "boomgardi", title: "اقامتگاه بوم گردی", key: "boomgardi", isChecked: false },
+            { name: "complex", title: "مجتمع اقامتی", key: "complex", isChecked: false },
+            { name: "karvansara", title: "کاروانسرا", key: "karvansara", isChecked: false }
+        ];*/
+
+        $scope.data.hotelFcility = [
+            { FacilityNameFa: "رستوران", FacilityCode: 016, FacilityId: 1 },
+            { FacilityNameFa: "آسانسور", FacilityCode: 059, FacilityId: 4 },
+            { FacilityNameFa: "پارکینگ", FacilityCode: 1037, FacilityId: 17 },
+            { FacilityNameFa: "استخر، سونا و جکوزی", FacilityCode: 1014, FacilityId: 20 },
+            { FacilityNameFa: "اینترنت داخل اتاق", FacilityCode: 1003, FacilityId: 35 }
+        ];
+
+        /*$scope.data.hotelUserRatingFilter = [
+           { hotelUserRatingFilter: "5.0", isChecked: false },
+           { hotelUserRatingFilter: "4.5", isChecked: false },
+           { hotelUserRatingFilter: "4.0", isChecked: false },
+           { hotelUserRatingFilter: "3.5", isChecked: false },
+           { hotelUserRatingFilter: "3.0", isChecked: false },
+           { hotelUserRatingFilter: "2.5", isChecked: false },
+           { hotelUserRatingFilter: "2.0", isChecked: false },
+           { hotelUserRatingFilter: "1.5", isChecked: false },
+           { hotelUserRatingFilter: "1.0", isChecked: false },
+           { hotelUserRatingFilter: "0.5", isChecked: false }
+        ];*/
+        $scope.initRzSlider();
+        $scope.changeFilterPlaceCategory();
+        $scope.changeFilter();
+    }
+    $scope.ignoreFilter();
+}]);;
