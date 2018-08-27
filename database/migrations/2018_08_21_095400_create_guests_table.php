@@ -15,7 +15,7 @@ class CreateGuestsTable extends Migration
     {
         Schema::create('guests', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('order_id')->unsigned();
+            $table->integer('orders_id')->unsigned();
             $table->string('name');
             $table->string('family');
             $table->string('nationalcode');
@@ -23,7 +23,7 @@ class CreateGuestsTable extends Migration
             $table->text('description');
             $table->timestamps();
 
-            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
+            $table->foreign('orders_id')->references('id')->on('orders')->onDelete('cascade');
         });
     }
 

@@ -13,6 +13,7 @@
         "morilog/jalali": "^2.3"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.1",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
         "mockery/mockery": "^1.0",
@@ -20,6 +21,9 @@
         "phpunit/phpunit": "^7.0"
     },
     "autoload": {
+        "files": [
+          "app/Helper/helpers.php"
+        ],
         "classmap": [
             "database/seeds",
             "database/factories"

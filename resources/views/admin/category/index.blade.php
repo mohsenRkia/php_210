@@ -1,4 +1,4 @@
-@extends('admin.lauout.index')
+@extends('admin.layout.index')
 
 @section('title' , 'لیست دسته بندی ها')
 
@@ -13,7 +13,6 @@
                     <section class="panel">
                         <header class="panel-heading">
                             لیست دسته ها
-
                         </header>
                         <div id="sample_1_wrapper" class="dataTables_wrapper form-inline" role="grid">
                             <table class="table table-striped border-top dataTable" id="sample_1" aria-describedby="sample_1_info">

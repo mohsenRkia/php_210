@@ -14,7 +14,7 @@ class AlterOrdersTable extends Migration
     public function up()
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->foreign('place_id')->references('id')->on('places')->onDelete('cascade');
+            $table->foreign('places_id')->references('id')->on('places')->onDelete('cascade');
         });
     }
 

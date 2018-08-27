@@ -2,20 +2,10 @@
     <!-- sidebar menu start-->
     <ul class="sidebar-menu">
         <li class="active">
-            <a class="" href="{{route('profile.index')}}">
+            <a class="" href="{{route('profile.myorders')}}">
                 <i class="icon-dashboard"></i>
-                <span>صفحه اصلی</span>
-            </a>
-        </li>
-        <li class="sub-menu">
-            <a href="javascript:;" class="">
-                <i class="icon-tasks"></i>
                 <span>سفارشات</span>
-                <span class="arrow"></span>
             </a>
-            <ul class="sub">
-                <li><a class="" href="form_component.html">مشاهده لیست</a></li>
-            </ul>
         </li>
         <li class="sub-menu">
             <a href="javascript:;" class="">
@@ -28,17 +18,23 @@
             </ul>
         </li>
         <li>
-            <a class="" href="inbox.html">
-                <i class="icon-envelope"></i>
-                <span>ایمیل </span>
-                <span class="label label-danger pull-right mail-info">2</span>
+            <a class="" href="{{route('home.index')}}">
+                <i class="icon-user"></i>
+                <span>ورود به صفحه اصلی</span>
             </a>
         </li>
         <li>
-            <a class="" href="http://127.0.0.1:8000/">
-                <i class="icon-user"></i>
-                <span>ورود به سایت</span>
+            <a class="dropdown-item" href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+
+                {!! '<i class="icon-user"></i>
+                <span>خروج از سایت</span>' !!}
             </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
         </li>
     </ul>
     <!-- sidebar menu end-->

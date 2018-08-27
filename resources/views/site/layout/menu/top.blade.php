@@ -56,6 +56,11 @@
                                    style="margin-top: 7px; background: #69C0AC; color: #fff !important;width:unset !important;"
                                    href="">{{ Auth::user()->name }} خوش آمدی</a>
                             </li>
+                            <li class="liHeader">
+                                <a class="jbLogin buttonLogin buttonHost dh-header-signup-btn"
+                                   style="margin-top: 7px; background: #69C0AC; color: #fff !important;width:unset !important;"
+                                   href="{{ route('profile.index') }}">پروفایل</a>
+                            </li>
                         @else
                         <li class="liHeader">
                             <a class="jbLogin buttonLogin buttonHost dh-header-signup-btn"

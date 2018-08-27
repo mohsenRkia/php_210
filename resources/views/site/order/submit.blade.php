@@ -35,7 +35,7 @@
                                 <img src="/upload/{{$place->photo}}" width="100%">
                             </div>
                         </div>
-                        <div class="col-md-6 col-sx-12 col-sg-12">
+                        <div class="col-md-8 col-sx-12 col-sg-12">
                             <ul class="jbUlNameResult">
                                 <li>
                                     <h2>
@@ -61,12 +61,6 @@
                                     <li><i class="fa fa-toggle-down"></i> تاریخ خروج : <span class="checkoutt">{{$persiant}}</span></li>
                                     <li><i class="fa fa-calendar"></i> {{Session::get('rentdays')}} شب</li>
                                 </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sx-12 col-sg-12 center">
-                            <div class="jbOrderNumber">
-                                کد رزرو آنلاین شما
-                                <span>192184</span>
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -112,7 +106,7 @@
                         </div>
                         <div class="dh-price-details-wrapper">
                             <div class="row" style="border: 1px solid #4cb4cd; border-radius: 3px; padding: 10px 20px 20px;">
-                                <div class="col-md-6 col-sm-6 dh-price-details">مجموع قیمت : <span><span class="currency">{{Session::get('totalprice')}}</span> ریال</span></div>
+                                <div class="col-md-12 dh-price-details">ملاحظات : <span>{{Session::get('decription')}}</span></div>
 
                             </div>
                             <div id="jbPriceChangeAlert" style="display: none;">
@@ -123,41 +117,6 @@
                         </div>
                     </div>
                     <div class="stepBank">
-                        <div class="jbMessageOrderPay">
-                            <div class="col-md-8">
-                                <i class="fa fa-check-square-o"></i>
-                                <text>
-                                    کاربرگرامی، رزرو شما نهایی شده است. شما تا <span class="showLocalTime showLocalTimePrice">1397/5/18-11:53</span> فرصت دارید با پرداخت مبلغ رزرو، واچر خود را دریافت نمایید.
-                                </text>
-                                <br>
-                                <i class="fa fa-check-square-o"></i>
-                                <text>
-                                    پرداخت درگاهی:
-                                    جهت پرداخت وجه، لطفا یکی از درگاه های زیر را به دلخواه انتخاب نمایید.توجه نمایید که هرکدام از این درگاه ها کلیه کارت های بانکی عضو شتاب را مورد پذیرش قرار می دهند.
-                                </text>
-                            </div>
-                            <div class="col-md-12">
-                                <i class="fa fa-check-square-o"></i>
-
-                                <text>
-                                    پرداخت از حساب کاربری:
-                                    شما می توانید در صورت کافی بودن موجودی حساب خود در جاباما، بدون پرداخت بانکی واچر خود را دریافت نمایید. مبلغ قابل پرداخت از موجودی شما کسر می گردد.
-                                </text>
-
-                                <br>
-                                <i class="fa fa-check-square-o"></i>
-                                <text>
-                                    پرداخت غیردرگاهی: شما می توانید تا پایان مهلت پرداخت، مبلغ نهایی رزرو را به شماره کارت زیر واریز نموده و پس از واریز وجه، با تماس و اعلام کد پیگیری به پشتیبانی جاباما، واچر خود را دریافت نمایید. درصورت عدم اعلام پرداخت در زمان مقرر، رزرو تایید نخواهد شد.
-                                    &nbsp;&nbsp;
-                                    شماره کارت:
-                                    <text>
-                                        8166-3139-8610-6219
-                                    </text>
-                                    (بانک سامان، به نام رضا ذولفقاری)
-                                </text>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
                         <div class="row">
 
                             <div class="col-md-2 col-xs-6" style="float: left !important">
@@ -175,7 +134,7 @@
                                     <input class="gtdatehidden" type="hidden" value="{{Session::get('family')}}" name="family">
                                     <input class="rentdays" type="hidden" value="{{Session::get('mobile')}}" name="mobile">
                                     <input class="gfdatehidden" type="hidden" value="{{Session::get('nationalcode')}}" name="nationalcode">
-
+                                    <input class="gfdatehidden" type="hidden" value="{{Session::get('decription')}}" name="decription">
 
 
                                     <div onclick="showMsgRole()">

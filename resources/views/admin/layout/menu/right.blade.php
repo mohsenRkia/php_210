@@ -46,8 +46,8 @@
                 <span class="arrow"></span>
             </a>
             <ul class="sub">
-                <li><a class="" href="basic_table.html">لیست کاربران</a></li>
-                <li><a class="" href="dynamic_table.html">ایجاد کاربر جدید</a></li>
+                <li><a class="" href="{{route('users.index')}}">لیست کاربران</a></li>
+                <li><a class="" href="{{route('users.create')}}">ایجاد کاربر جدید</a></li>
             </ul>
         </li>
         <li>
@@ -58,10 +58,23 @@
             </a>
         </li>
         <li>
-            <a class="" href="http://127.0.0.1:8000/">
+            <a class="" href="{{route('home.index')}}">
                 <i class="icon-user"></i>
-                <span>ورود به سایت</span>
+                <span>ورود به صفحه اصلی</span>
             </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+
+                {!! '<i class="icon-user"></i>
+                <span>خروج از سایت</span>' !!}
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
         </li>
     </ul>
     <!-- sidebar menu end-->

@@ -27,10 +27,6 @@ Route::group(['prefix' => 'place'],function (){
         'as' => 'place.show'
     ]);
 
-
-    /**
-     * ROUTES OF ORDERS
-     */
     Route::get('order/{id}',[
         'uses' => 'OrderController@first',
         'as' => 'order.first'
@@ -56,8 +52,11 @@ Route::group(['prefix' => 'place'],function (){
             'uses' => 'ProfileController@index',
             'as' => 'profile.index'
         ]);
+        Route::get('/myorders' , [
+            'uses' => 'ProfileController@orders',
+            'as' => 'profile.myorders'
+        ]);
     });
-
 
     /**
      * ROUTES OF ADMIN PAGES
@@ -73,66 +72,108 @@ Route::group(['prefix' => 'place'],function (){
     /**
      * ROUTES OF CATEGORIS
      */
-    Route::get('category',[
-        'uses' => 'CategoryController@index',
-        'as' => 'category.index'
-    ]);
-    Route::get('category/create',[
-        'uses' => 'CategoryController@create',
-        'as' => 'category.create'
-    ]);
-    Route::post('category/store',[
-        'uses' => 'CategoryController@store',
-        'as' => 'category.store'
-    ]);
-    Route::get('category/show/{id}',[
-        'uses' => 'CategoryController@show',
-        'as' => 'category.show'
-    ]);
+    Route::group(['prefix' => 'category'],function (){
 
-    Route::get('category/edit/{id}',[
-        'uses' => 'CategoryController@edit',
-        'as' => 'category.edit'
-    ]);
-    Route::post('category/update/{id}',[
-        'uses' => 'CategoryController@update',
-        'as' => 'category.update'
-    ]);
-    Route::get('category/delete/{id}',[
-        'uses' => 'CategoryController@destroy',
-        'as' => 'category.destroy'
-    ]);
-        /**
-         * ROUTES OF PLACES
-         */
-        Route::get('place',[
-            'uses' => 'PlaceController@index',
-            'as' => 'place.index'
+        Route::get('/',[
+            'uses' => 'CategoryController@index',
+            'as' => 'category.index'
         ]);
-        Route::get('place/create',[
-            'uses' => 'PlaceController@create',
-            'as' => 'place.create'
+        Route::get('/create',[
+            'uses' => 'CategoryController@create',
+            'as' => 'category.create'
         ]);
-        Route::post('place/create',[
-            'uses' => 'PlaceController@store',
-            'as' => 'place.store'
+        Route::post('/store',[
+            'uses' => 'CategoryController@store',
+            'as' => 'category.store'
         ]);
-        Route::get('place/edit/{id}',[
-            'uses' => 'PlaceController@edit',
-            'as' => 'place.edit'
-        ]);
-        Route::post('place/update/{id}',[
-            'uses' => 'PlaceController@update',
-            'as' => 'place.update'
-        ]);
-        Route::get('place/delete/{id}',[
-            'uses' => 'PlaceController@destroy',
-            'as' => 'place.destroy'
+        Route::get('/show/{id}',[
+            'uses' => 'CategoryController@show',
+            'as' => 'category.show'
         ]);
 
+        Route::get('/edit/{id}',[
+            'uses' => 'CategoryController@edit',
+            'as' => 'category.edit'
+        ]);
+        Route::post('/update/{id}',[
+            'uses' => 'CategoryController@update',
+            'as' => 'category.update'
+        ]);
+        Route::get('/delete/{id}',[
+            'uses' => 'CategoryController@destroy',
+            'as' => 'category.destroy'
+        ]);
+
+    });
+
         /**
-         * ROUTES OF ...
+         * ROUTES OF ADD PLACES
          */
+        Route::group(['prefix' => 'place'], function (){
+
+            Route::get('/',[
+                'uses' => 'PlaceController@index',
+                'as' => 'place.index'
+            ]);
+            Route::get('/create',[
+                'uses' => 'PlaceController@create',
+                'as' => 'place.create'
+            ]);
+            Route::post('/create',[
+                'uses' => 'PlaceController@store',
+                'as' => 'place.store'
+            ]);
+            Route::get('/edit/{id}',[
+                'uses' => 'PlaceController@edit',
+                'as' => 'place.edit'
+            ]);
+            Route::post('/update/{id}',[
+                'uses' => 'PlaceController@update',
+                'as' => 'place.update'
+            ]);
+            Route::get('/delete/{id}',[
+                'uses' => 'PlaceController@destroy',
+                'as' => 'place.destroy'
+            ]);
+
+        });
+
+
+        /**
+         * ROUTES OF USERS
+         */
+Route::group(['prefix' => 'users'], function (){
+
+    Route::get('/',[
+        'uses' => 'UsersController@index',
+        'as' => 'users.index'
+    ]);
+    Route::get('/create',[
+        'uses' => 'UsersController@create',
+        'as' => 'users.create'
+    ]);
+    Route::post('/store',[
+        'uses' => 'UsersController@store',
+        'as' => 'users.store'
+    ]);
+
+    Route::get('/edit/{id}',[
+        'uses' => 'UsersController@edit',
+        'as' => 'users.edit'
+    ]);
+
+    Route::post('/update/{id}',[
+       'uses' => 'UsersController@update',
+        'as' => 'users.update'
+    ]);
+
+
+    Route::get('delete/{id}',[
+        'uses' => 'UsersController@destroy',
+        'as' => 'users.delete'
+    ]);
+
+});
 
 
 

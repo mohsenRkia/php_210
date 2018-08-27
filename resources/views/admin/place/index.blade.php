@@ -1,4 +1,4 @@
-@extends('admin.lauout.index')
+@extends('admin.layout.index')
 
 @section('title' , 'مطالب قبلی')
 
@@ -54,10 +54,8 @@
 
 
 @section('script')
-    <script src="/admin/js/jquery.sparkline.js" type="text/javascript"></script>
-    <script src="/admin/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
-    <script src="/admin/js/owl.carousel.js" ></script>
-    <script src="/admin/js/jquery.customSelect.min.js" ></script>
-    <script src="/admin/js/sparkline-chart.js"></script>
-    <script src="/admin/js/easy-pie-chart.js"></script>
+    <script type="text/javascript" src="/admin/assets/data-tables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="/admin/assets/data-tables/DT_bootstrap.js"></script>
+    <script src="/admin/js/dynamic-table.js"></script>
+
 @endsection

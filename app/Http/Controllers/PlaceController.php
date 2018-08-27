@@ -54,12 +54,12 @@ class PlaceController extends Controller
         $photo->move($path,$photoName);
 
         $places = $this->places;
-        $places->user_id = $request->get('user_id');
+        $places->users_id = $request->get('user_id');
         $places->title = $request->get('title');
         $places->body = $request->get('body');
         $places->price = $request->get('price');
         $places->capacity = $request->get('capacity');
-        $places->category_id = $request->get('category_id');
+        $places->categories_id = $request->get('category_id');
         $places->photo = $photoName;
         $places->save();
 
@@ -87,7 +87,7 @@ class PlaceController extends Controller
     {
         $categories = $this->category->all();
         $places = $this->places->find($id);
-        $cat = $this->category->find($places->category_id);
+        $cat = $this->category->find($places->categories_id);
         return view('admin.place.edit',compact(['places','categories','cat']));
     }
 
@@ -106,12 +106,12 @@ class PlaceController extends Controller
         $photo->move($path,$photoName);
 
         $places = $this->places->find($id);
-        $places->user_id = $request->get('user_id');
+        $places->users_id = $request->get('user_id');
         $places->title = $request->get('title');
         $places->body = $request->get('body');
         $places->price = $request->get('price');
         $places->capacity = $request->get('capacity');
-        $places->category_id = $request->get('category_id');
+        $places->categories_id = $request->get('category_id');
         $places->photo = $photoName;
         $places->save();
 

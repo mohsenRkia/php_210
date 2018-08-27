@@ -18,15 +18,15 @@ class CreateOrdersTable extends Migration
             $table->string('checkin');
             $table->string('checkout');
             $table->integer('rentdays');
-            $table->integer('user_id')->unsigned();
-            $table->integer('place_id')->unsigned();
+            $table->integer('users_id')->unsigned();
+            $table->integer('places_id')->unsigned();
             $table->double('totallprice');
             $table->integer('persons');
             $table->boolean('status')->default(0);
             $table->string('ordercode');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
 
         });
     }

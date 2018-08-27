@@ -19,7 +19,7 @@
     <!--external css-->
     <link href="/admin/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="/admin/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="/admin/css/owl.carousel.css" type="text/css">
     <!-- Custom styles for this template -->
     <link href="/admin/css/style.css" rel="stylesheet">
     <link href="/admin/css/style-responsive.css" rel="stylesheet" />
@@ -35,11 +35,11 @@
 
 <section id="container" class="">
     <!--header start-->
-@include('admin.lauout.menu.top')
+@include('admin.layout.menu.top')
 <!--header end-->
     <!--sidebar start-->
     <aside>
-        @include('admin.lauout.menu.right')
+        @include('admin.layout.menu.right')
     </aside>
     <!--sidebar end-->
     <!--main content start-->

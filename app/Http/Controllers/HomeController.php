@@ -34,7 +34,7 @@ class HomeController extends Controller
     public function show($id)
     {
         $place = $this->place->find($id);
-        $cat = $this->categories->find($place->category_id);
+        $cat = $this->categories->find($place->categories_id);
         return view('site.place',compact(['place','cat']));
     }
 }

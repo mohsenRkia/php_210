@@ -1,4 +1,4 @@
-@extends('admin.lauout.index')
+@extends('admin.layout.index')
 
 @section('title' , 'ایجاد دسته جدید')
 
