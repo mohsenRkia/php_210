@@ -20,7 +20,7 @@ Route::get('/', [
     'as' => 'home.index'
 ]);
 
-Route::group(['prefix' => 'place'],function (){
+Route::group(['prefix' => 'single'],function (){
 
     Route::get('/{id}', [
         'uses' => 'HomeController@show',
@@ -175,6 +175,17 @@ Route::group(['prefix' => 'users'], function (){
 
 });
 
+        /**
+         * ROUTES OF ADMIN MYORDERS
+         */
+        Route::get('myorders',[
+           'uses' => 'AdminpanelController@myorder',
+           'as' => 'admin.myorders'
+        ]);
+        Route::get('allorders',[
+            'uses' => 'AdminpanelController@allorders',
+            'as' => 'admin.allorders'
+        ]);
 
 
 });

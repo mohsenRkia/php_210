@@ -109,9 +109,7 @@
                                 <li><a href="user/login7d19.html#charge"><i class="fa fa-credit-card" aria-hidden="true"></i> شارژ حساب</a></li>
                                 <li><a href="user/login7d19.html#coins"><i class="fa fa-file-text-o" aria-hidden="true"></i>سکه‌های من</a></li>
                                 <li><a href="user/login7d19.html#password"> <i class="fa fa-cog" aria-hidden="true"></i> تغییر رمز عبور</a></li>
-                                <li class="lilogout">
-                                    <form action="https://www.jabama.com/user/logoff" class="logoutForm" id="logoutForm" method="post">                                            <a href="javascript:document.getElementById('logoutForm').submit()"><i class="fa fa-sign-out" aria-hidden="true"></i> خروج</a>
-                                    </form>                                    </li>
+
                             </ul>
 
                         </li>

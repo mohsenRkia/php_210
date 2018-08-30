@@ -57,11 +57,11 @@
                 </div>
                 <div class="col-md-6 social_media" style="text-align: left;">
 
-                    <a class="jbSocialNetwork" href="https://twitter.com/JabamaIR" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a class="jbSocialNetwork " href="http://google.com/+JabamaHotel" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                    <a class="jbSocialNetwork " href="https://www.facebook.com/jabama.ir" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a class="jbSocialNetwork" href="https://www.linkedin.com/company/jabama.ir?trk=tyah&amp;trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A10373071%2Cidx%3A2-1-2%2CtarId%3A1452424683256%2Ctas%3Ajabam" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    <a class="jbSocialNetwork" href="https://instagram.com/jabama.ir/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a class="jbSocialNetwork" href="" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a class="jbSocialNetwork " href="" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a class="jbSocialNetwork " href="" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a class="jbSocialNetwork" href="" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a class="jbSocialNetwork" href="" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 
 
                 </div>

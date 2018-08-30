@@ -1,11 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Jobs\SendEmailJob;
+use App\Mail\OrderSubmit;
 use App\Models\Guests;
 use App\Models\Orders;
 use App\Models\Places;
 use App\Models\Categories;
+use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
 
@@ -15,19 +21,24 @@ class OrderController extends Controller
     protected $guest;
     protected $places;
     protected $categories;
-    public function __construct(Orders $orders,Places $places,Categories $categories,Guests $guests)
+    protected $user;
+    public function __construct(Orders $orders,Places $places,Categories $categories,Guests $guests,User $user)
     {
         $this->middleware('auth');
         $this->places = $places;
         $this->categories = $categories;
         $this->order = $orders;
         $this->guest = $guests;
+        $this->user = $user;
     }
     public function first($id)
     {
-        $place = $this->places->find($id);
-        $cat = $this->categories->find($place->categories_id);
-        return view('site.order.first',compact(['place','cat']));
+        $places = $this->places
+            ->with('categories')
+            ->get();
+
+        $place = $places->find($id);
+        return view('site.order.first',compact(['place']));
     }
 
     public function submit($id,Request $request)
@@ -88,6 +99,14 @@ class OrderController extends Controller
         $guest->mobile = $request->get('mobile');;
         $guest->description = $request->get('decription');
         $guest->save();
+
+
+        $currentuser = Auth::user()->id;
+        $user = $this->user->find($currentuser);
+        $userEmail = $user->email;
+
+        $sendEmail = (new SendEmailJob($userEmail))->delay(Carbon::now()->addSeconds(3));
+        dispatch($sendEmail);
 
         return view('site.order.finall');
     }

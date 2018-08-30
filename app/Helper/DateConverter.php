@@ -21,4 +21,9 @@ trait DateConverter
         return toJalali($value);
     }
 
+    public function getCreatedAtAttribute($value)
+    {
+        return timeStampstoJalali($value);
+    }
+
 }

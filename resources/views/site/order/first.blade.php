@@ -49,7 +49,7 @@
                                 </li>
                             </ul>
                             <div class="JbOrderLocationDet">
-                                {{$cat->name}}
+                                {{$place->categories->name}}
                             </div>
 
                             <hr class="jbHr">

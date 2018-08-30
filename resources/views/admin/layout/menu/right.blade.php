@@ -32,11 +32,21 @@
         <li class="sub-menu">
             <a href="javascript:;" class="">
                 <i class="icon-tasks"></i>
-                <span>سفارشات</span>
+                <span>سفارشات من</span>
                 <span class="arrow"></span>
             </a>
             <ul class="sub">
-                <li><a class="" href="form_component.html">مشاهده لیست</a></li>
+                <li><a class="" href="{{route('admin.myorders')}}">مشاهده لیست</a></li>
+            </ul>
+        </li>
+        <li class="sub-menu">
+            <a href="javascript:;" class="">
+                <i class="icon-tasks"></i>
+                <span>سفارشات مشتری</span>
+                <span class="arrow"></span>
+            </a>
+            <ul class="sub">
+                <li><a class="" href="{{route('admin.allorders')}}">مشاهده لیست</a></li>
             </ul>
         </li>
         <li class="sub-menu">

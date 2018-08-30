@@ -8,16 +8,14 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     protected $place;
-    protected $categories;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(Places $places, Categories $categories)
+    public function __construct(Places $places)
     {
         $this->place = $places;
-        $this->categories = $categories;
     }
 
     /**
@@ -33,8 +31,12 @@ class HomeController extends Controller
 
     public function show($id)
     {
-        $place = $this->place->find($id);
-        $cat = $this->categories->find($place->categories_id);
-        return view('site.place',compact(['place','cat']));
+        $places = $this->place
+            ->with('categories')
+            ->get();
+
+        //var_dump($place->find($id)->toArray());
+        $place = $places->find($id);
+        return view('site.place',compact(['place']));
     }
 }

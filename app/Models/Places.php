@@ -7,17 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Places extends Model
 {
-    public function category()
+    public function categories()
     {
         return $this->belongsTo(Categories::class);
     }
 
-    public function user()
+    public function users()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function order()
+    public function orders()
     {
         return $this->hasOne(Orders::class);
     }

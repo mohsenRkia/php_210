@@ -38,6 +38,7 @@ class PlaceController extends Controller
         $users = $this->user->all();
         $categories = $this->category->all();
         return view('admin.place.create',compact(['users','categories']));
+
     }
 
     /**

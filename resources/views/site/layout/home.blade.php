@@ -34,11 +34,9 @@
                 <div class="hidden-lg hidden-md hidden-sm col-xs-12 dh-trust-seal-images-items">
                     <div class="col-xs-12 dh-trust-seal-images-item">
 
-                        <img src="https://trustseal.enamad.ir/logo.aspx?id=94996&amp;p=b3de5n2IaqRfqjLC" alt="" onclick="window.open('https://trustseal.enamad.ir/Verify.aspx?id=94996&amp;p=b3de5n2IaqRfqjLC', 'Popup','toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30')" style="cursor:pointer" id="b3de5n2IaqRfqjLC">
                     </div>
                     <div class="col-xs-12 dh-trust-seal-images-item">
 
-                        <img id='jxlznbqergvjfukzoeukapfu' style='cursor:pointer' onclick='window.open("https://logo.samandehi.ir/Verify.aspx?id=123685&amp;p=rfthuiwkxlaogvkamcsidshw", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt='logo-samandehi' src='https://logo.samandehi.ir/logo.aspx?id=123685&amp;p=nbpdodrfqftiwlbqaqgwujyn'/>
                     </div>
                 </div>
             </div>
