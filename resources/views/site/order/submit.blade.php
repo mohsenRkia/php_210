@@ -1,7 +1,7 @@
 @extends('site.layout.more')
 
 @section('title')
-    ثبت اولیه
+    مشاهده اطلاعات برای رزرو {{$place->title}}
 @endsection
 
 @section('single')
@@ -57,8 +57,8 @@
                             <hr class="jbHr">
                             <div class="jbCheckInOut">
                                 <ul>
-                                    <li><i class="fa fa-toggle-up"></i> تاریخ ورود : <span class="checkins">{{$persianf}}</span></li>
-                                    <li><i class="fa fa-toggle-down"></i> تاریخ خروج : <span class="checkoutt">{{$persiant}}</span></li>
+                                    <li><i class="fa fa-toggle-up"></i> تاریخ ورود : <span class="checkins">{{Session::get('checkin')}}</span></li>
+                                    <li><i class="fa fa-toggle-down"></i> تاریخ خروج : <span class="checkoutt">{{Session::get('checkout')}}</span></li>
                                     <li><i class="fa fa-calendar"></i> {{Session::get('rentdays')}} شب</li>
                                 </ul>
                             </div>

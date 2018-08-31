@@ -1,5 +1,7 @@
 @extends('site.layout.more')
-@section('title',' اطلاعات ویلا')
+@section('title')
+{{$place->title}}
+@endsection
 @section('single')
     <link href="/site/bundles/mystyle.css" rel="stylesheet" />
 

@@ -10,23 +10,23 @@
         <li class="sub-menu">
             <a href="javascript:;" class="">
                 <i class="icon-book"></i>
-                <span>مطالب</span>
+                <span>اقامتگاه ها</span>
                 <span class="arrow"></span>
             </a>
             <ul class="sub">
-                <li><a class="" href="{{route('place.index')}}">مطالب قبلی</a></li>
-                <li><a class="" href="{{route('place.create')}}">ایجاد مطلب جدید</a></li>
+                <li><a class="" href="{{route('place.index')}}">لیست اقامتگاه ها</a></li>
+                <li><a class="" href="{{route('place.create')}}">ایجاد اقامتگاه جدید</a></li>
             </ul>
         </li>
         <li class="sub-menu">
             <a href="javascript:;" class="">
                 <i class="icon-cogs"></i>
-                <span>دسته ها</span>
+                <span>شهر ها</span>
                 <span class="arrow"></span>
             </a>
             <ul class="sub">
-                <li><a class="" href="{{route('category.index')}}">دسته های قبلی</a></li>
-                <li><a class="" href="{{route('category.create')}}">ایجاد دسته جدید</a></li>
+                <li><a class="" href="{{route('category.index')}}">لیست شهر ها</a></li>
+                <li><a class="" href="{{route('category.create')}}">ایجاد شهر جدید</a></li>
             </ul>
         </li>
         <li class="sub-menu">

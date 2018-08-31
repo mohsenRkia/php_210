@@ -43,24 +43,39 @@ class OrderController extends Controller
 
     public function submit($id,Request $request)
     {
-        $persianf = $request->get('persianf');
-        $persiant = $request->get('persiant');
-        $checkin = $request->get('checkin');
-        $checkout = $request->get('checkout');
-        $rentdays = $request->get('rentdays');
+        $yearFrom = $request->get('year_from');
+        $monthFrom = $request->get('month_from');
+        $dayFrom = $request->get('day_from');
+        $checkin = $yearFrom . "-" . $monthFrom . "-" . $dayFrom;
+
+        $yearTo = $request->get('year_to');
+        $monthTo = $request->get('month_to');
+        $dayTo = $request->get('day_to');
+        $checkout = $yearTo . "-" . $monthTo . "-" . $dayTo;
+
+
+        $gFrom = jToGregorian($yearFrom,$monthFrom,$dayFrom);
+        $gTo = jToGregorian($yearTo,$monthTo,$dayTo);
+
+        $gFromString = implode("-",$gFrom);
+        $gToString = implode("-",$gTo);
+
+        $rentdays = (int)(diffDate($gFromString,$gToString));
         $persons = $request->get('persons');
         $place = $this->places->find($id);
         $price = $place->price;
-        $totalprice = (int)$rentdays * $price;
+        $totalprice = $rentdays * $price;
+
+
         $name = $request->get('name');
         $family = $request->get('family');
         $mobile = $request->get('mobile');
         $nationalcode = $request->get('nationalcode');
         $decription = $request->get('decription');
 
-
         $request->session()->flash('checkin',$checkin);
         $request->session()->flash('checkout',$checkout);
+
         $request->session()->flash('rentdays',$rentdays);
         $request->session()->flash('persons',$persons);
         $request->session()->flash('totalprice',$totalprice);

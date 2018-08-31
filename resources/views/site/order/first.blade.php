@@ -1,7 +1,8 @@
 @extends('site.layout.more')
 
-@section('title','ثبت رزرو')
-
+@section('title')
+ثبت رزرو {{$place->title}}
+@endsection
 @section('single')
     <body>
     <link href="/site/bundles/mystyle.css" rel="stylesheet" />
@@ -27,9 +28,6 @@
                 <div class="jbDivBoxOrder step1">
                     <form method="POST" action="{{route('order.submit',['id' => $place->id])}}">
                         {{ csrf_field() }}
-                        <input class="gfdatehidden" type="hidden" value="" name="checkin">
-                        <input class="gtdatehidden" type="hidden" value="" name="checkout">
-                        <input class="rentdays" type="hidden" value="" name="rentdays">
 
                         <div class="jbTopDetHotelOrder">
                         <div class="col-md-3 col-sx-12 col-sg-12">
@@ -59,38 +57,126 @@
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                     <div class="form-group col-lg-6">
-                                                    <div class="input-group">
-                                                        <div class="input-group-addon" data-mdformat="yyyy/MM/dd" data-mddatetimepicker="true" data-trigger="click" id="fromDate1" data-groupid="group1">
-                                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                        <!-- start list -->
+                                                            <label for="birth">تاریخ ورود</label>
+                                                        <select name="day_from" class="day">
+                                                                <option value="1" label="1">1</option>
+                                                                <option value="2" label="2">2</option>
+                                                                <option value="3" label="3">3</option>
+                                                                <option value="4" label="4">4</option>
+                                                                <option value="5" label="5">5</option>
+                                                                <option value="6" label="6">6</option>
+                                                                <option value="7" label="7">7</option>
+                                                                <option value="8" label="8">8</option>
+                                                                <option value="9" label="9">9</option>
+                                                                <option value="10" label="10">10</option>
+                                                                <option value="11" label="11">11</option>
+                                                                <option value="12" label="12">12</option>
+                                                                <option value="13" label="13">13</option>
+                                                                <option value="14" label="14">14</option>
+                                                                <option value="15" label="15">15</option>
+                                                                <option value="16" label="16">16</option>
+                                                                <option value="17" label="17">17</option>
+                                                                <option value="18" label="18">18</option>
+                                                                <option value="19" label="19">19</option>
+                                                                <option value="20" label="20">20</option>
+                                                                <option value="21" label="21">21</option>
+                                                                <option value="22" label="22">22</option>
+                                                                <option value="23" label="23">23</option>
+                                                                <option value="24" label="24">24</option>
+                                                                <option value="25" label="25">25</option>
+                                                                <option value="26" label="26">26</option>
+                                                                <option value="27" label="27">27</option>
+                                                                <option value="28" label="28">28</option>
+                                                                <option value="29" label="29">29</option>
+                                                                <option value="30" label="30">30</option>
+                                                                <option value="31" label="31">31</option>
+                                                            </select>
+                                                        <select name="month_from" class="month">
+                                                            <option value="1" label="فروردین">فروردین</option>
+                                                            <option value="2" label="اردیبهشت">اردیبهشت</option>
+                                                            <option value="3" label="خرداد">خرداد</option>
+                                                            <option value="4" label="تیر">تیر</option>
+                                                            <option value="5" label="مرداد">مرداد</option>
+                                                            <option value="6" label="شهریور">شهریور</option>
+                                                            <option value="7" label="مهر">مهر</option>
+                                                            <option value="8" label="آبان">آبان</option>
+                                                            <option value="9" label="آذر">آذر</option>
+                                                            <option value="10" label="دی">دی</option>
+                                                            <option value="11" label="بهمن">بهمن</option>
+                                                            <option value="12" label="اسفند">اسفند</option>
+                                                        </select>
+                                                        <select name="year_from" class="year">
+                                                            <option value="1397">1397</option>
+                                                            <option value="1398">1398</option>
+                                                        </select>
+                                                        <!-- end list -->
+                                                    </div>
+                                                        <div class="form-group col-lg-6">
+                                                                <!-- start list -->
+                                                            <label for="birth">تاریخ خروج</label>
+                                                            <select name="day_to" class="day">
+                                                                <option value="1" label="1">1</option>
+                                                                <option value="2" label="2">2</option>
+                                                                <option value="3" label="3">3</option>
+                                                                <option value="4" label="4">4</option>
+                                                                <option value="5" label="5">5</option>
+                                                                <option value="6" label="6">6</option>
+                                                                <option value="7" label="7">7</option>
+                                                                <option value="8" label="8">8</option>
+                                                                <option value="9" label="9">9</option>
+                                                                <option value="10" label="10">10</option>
+                                                                <option value="11" label="11">11</option>
+                                                                <option value="12" label="12">12</option>
+                                                                <option value="13" label="13">13</option>
+                                                                <option value="14" label="14">14</option>
+                                                                <option value="15" label="15">15</option>
+                                                                <option value="16" label="16">16</option>
+                                                                <option value="17" label="17">17</option>
+                                                                <option value="18" label="18">18</option>
+                                                                <option value="19" label="19">19</option>
+                                                                <option value="20" label="20">20</option>
+                                                                <option value="21" label="21">21</option>
+                                                                <option value="22" label="22">22</option>
+                                                                <option value="23" label="23">23</option>
+                                                                <option value="24" label="24">24</option>
+                                                                <option value="25" label="25">25</option>
+                                                                <option value="26" label="26">26</option>
+                                                                <option value="27" label="27">27</option>
+                                                                <option value="28" label="28">28</option>
+                                                                <option value="29" label="29">29</option>
+                                                                <option value="30" label="30">30</option>
+                                                                <option value="31" label="31">31</option>
+                                                            </select>
+                                                            <select name="month_to" class="month">
+                                                                <option value="1" label="فروردین">فروردین</option>
+                                                                <option value="2" label="اردیبهشت">اردیبهشت</option>
+                                                                <option value="3" label="خرداد">خرداد</option>
+                                                                <option value="4" label="تیر">تیر</option>
+                                                                <option value="5" label="مرداد">مرداد</option>
+                                                                <option value="6" label="شهریور">شهریور</option>
+                                                                <option value="7" label="مهر">مهر</option>
+                                                                <option value="8" label="آبان">آبان</option>
+                                                                <option value="9" label="آذر">آذر</option>
+                                                                <option value="10" label="دی">دی</option>
+                                                                <option value="11" label="بهمن">بهمن</option>
+                                                                <option value="12" label="اسفند">اسفند</option>
+                                                            </select>
+                                                            <select name="year_to" class="year">
+                                                                <option value="1397">1397</option>
+                                                                <option value="1398">1398</option>
+                                                            </select>
+                                                                <!-- end list -->
                                                         </div>
-                                                        <input name="persianf" type="text" class="form-control" id="fromDate1" placeholder="تاریخ ورود (نمونه 1397/6/1)" />
                                                     </div>
                                                 </div>
-                                                    <div class="form-group col-lg-6">
-                                                    <div class="input-group">
-                                                        <div class="input-group-addon" id="toDate1">
-                                                            <span class="glyphicon glyphicon-calendar"></span>
-                                                        </div>
-                                                        <input name="persiant" type="text" class="form-control" id="toDate1" placeholder="تاریخ خروج (نمونه 1397/6/10)" />
-                                                    </div>
-                                                </div>
-                                                        <div class="jbCheckInOut">
-                                                            <ul>
-                                                                <li><i class="fa fa-toggle-up"></i> تاریخ ورود : <span class="showyearSF"></span></li>
-                                                                <li><i class="fa fa-toggle-down"></i> تاریخ خروج : <span class="showyearST"></span></li>
-                                                                <li><i class="fa fa-calendar"></i> میزان اقامت : <span class="rentDays"></span></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                <hr>
                                 <div class="col-lg-12">
-                                    <div class="form-group col-lg-10">
+                                    <div class="form-group">
                                         <label for="guests" class="col-lg-2">
                                             تعداد مهمان :
                                         </label>
-                                        <div class="col-lg-10">
-                                            <input type="text" name="persons" class="form-control getguest" placeholder="تعداد مهمان ها (حداکثر {{$place->capacity}} نفر)" />
+                                        <div class="col-lg-6">
+                                            <input type="text" name="persons" class="form-control" placeholder="تعداد مهمان ها (حداکثر {{$place->capacity}} نفر)" />
                                         </div>
 
                                     </div>
@@ -110,16 +196,16 @@
                                 <fieldset class="jbFieldsetAddMosafer">
                                     <div class="form-inline boxGest9386-114051">
                                         <div class="form-group col-sg-20 col-sm-12 paddingB10">
-                                            <input name="name" id="GuestName9386-114051" placeholder="نام" class="form-control passengerName">
+                                            <input name="name" placeholder="نام" class="form-control">
                                         </div>
                                         <div class="form-group col-sg-20 col-sm-12 paddingB10">
-                                            <input name="family" id="GuestLastName9386-114051" required="" placeholder="نام خانوادگی" class="form-control passengerLastName">
+                                            <input name="family" required="" placeholder="نام خانوادگی" class="form-control">
                                         </div>
                                         <div class="form-group col-sg-20 col-sm-12 paddingB10">
-                                            <input name="mobile" id="" placeholder="موبایل (09121234567)" class="form-control passengerMobile">
+                                            <input name="mobile" placeholder="موبایل (09121234567)" class="form-control">
                                         </div>
                                         <div class="form-group col-sg-20 col-sm-12 paddingB10">
-                                            <input id="nationalcode" name="nationalcode" placeholder="کد ملی" class="form-control idnumber9386-114051">
+                                            <input name="nationalcode" placeholder="کد ملی" class="form-control">
                                         </div>
                                         <br>
                                         <hr>
@@ -135,43 +221,7 @@
                                 </div>
                             </div>
                             <br>
-                        <h4 class="jbTitle">
-                            <span>اطلاعات اقامتگاه</span>
-                        </h4>
-                        <div id="no-more-tables">
-                            <table class="jbTableOrder">
-                                <thead class="cf">
-                                <tr>
-                                    <th>ظرفیت اقامتگاه</th>
-                                    <th>تعداد میهمانان</th>
-                                    <th>قیمت برای یک شب (ریال)</th>
-                                    <th>قیمت کل (ریال)</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
 
-                                    <td data-dh-rid="11405-0">
-                                        {{$place->capacity}} نفر
-                                    </td>
-                                    <td data-title="مشخصات اتاق">
-                                        <span id="showguest"></span> نفر
-                                    </td>
-                                    <td data-title="قیمت برای یک شب(ریال)">
-                                        <span data-dh-per-night-price="" id="pricenight">{{$place->price}}</span>
-                                    </td>
-                                    <td data-title="قیمت کل (ریال)">
-                                        <span id="totalprice"></span>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="jbDivTotalPrice clearfix">
-                            <div class="pull-left">
-                                قابل پرداخت : <span><span class="currency" data-dh-sum-detail-price="" id="payprice"></span> ریال</span>
-                            </div>
-                        </div>
 
                     </div>
                     <div class="clearfix"></div>

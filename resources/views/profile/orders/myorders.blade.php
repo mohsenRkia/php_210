@@ -1,6 +1,6 @@
 @extends('profile.lauout.index')
 
-@section('title' , 'مطالب قبلی')
+@section('title' , 'رزروهای من')
 
 
 @section('maincontent')
@@ -12,7 +12,7 @@
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            مطالب قبلی
+                            رزروهای من
 
                         </header>
                         <div id="sample_1_wrapper" class="dataTables_wrapper form-inline" role="grid">

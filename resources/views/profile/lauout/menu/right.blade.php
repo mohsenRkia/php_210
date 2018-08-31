@@ -14,7 +14,9 @@
                 <span class="arrow"></span>
             </a>
             <ul class="sub">
-                <li><a class="" href="basic_table.html">تغییر مشخصات</a></li>
+                <li>
+                    <a class="" href="{{route('profile.setting',['id' => Auth::user()->id])}}">تغییر مشخصات</a>
+                </li>
             </ul>
         </li>
         <li>

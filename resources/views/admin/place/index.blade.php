@@ -1,6 +1,6 @@
 @extends('admin.layout.index')
 
-@section('title' , 'مطالب قبلی')
+@section('title' , 'لیست اقامتگاه ها')
 
 
 @section('maincontent')
@@ -12,7 +12,7 @@
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            مطالب قبلی
+                            لیست اقامتگاه ها
 
                         </header>
                         <div id="sample_1_wrapper" class="dataTables_wrapper form-inline" role="grid">
@@ -32,8 +32,8 @@
                                     <tr class="gradeX odd">
                                         <td class="hidden-phone ">{{$place->id}}</td>
                                         <td class=" ">{{$place->title}}</td>
-                                        <td class="hidden-phone ">{{$place->created_at->diffForHumans()}}</td>
-                                        <td class="center hidden-phone ">{{$place->updated_at->diffForHumans()}}</td>
+                                        <td class="hidden-phone ">{{$place->created_at}}</td>
+                                        <td class="center hidden-phone ">{{$place->updated_at}}</td>
                                         <td class="hidden-phone "><a href="{{route('place.edit',['id' => $place->id])}}"><span class="label label-success">ویرایش</span></a>  <a href="{{route('place.destroy',['id' => $place->id])}}"><span class="label label-danger">حذف</span></a> </td>
                                     </tr>
                                 @endforeach

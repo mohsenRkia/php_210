@@ -1,6 +1,6 @@
 @extends('admin.layout.index')
 
-@section('title' , 'لیست دسته بندی ها')
+@section('title' , 'لیست شهرها')
 
 
 @section('maincontent')
@@ -12,7 +12,7 @@
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            لیست دسته ها
+                            لیست شهرها
                         </header>
                         <div id="sample_1_wrapper" class="dataTables_wrapper form-inline" role="grid">
                             <table class="table table-striped border-top dataTable" id="sample_1" aria-describedby="sample_1_info">
@@ -31,8 +31,8 @@
                                 <tr class="gradeX odd">
                                     <td class="hidden-phone ">{{$category->id}}</td>
                                     <td class=" ">{{$category->name}}</td>
-                                    <td class="hidden-phone ">{{$category->created_at->diffForHumans()}}</td>
-                                    <td class="center hidden-phone ">{{$category->updated_at->diffForHumans()}}</td>
+                                    <td class="hidden-phone ">{{$category->created_at}}</td>
+                                    <td class="center hidden-phone ">{{$category->updated_at}}</td>
                                     <td class="hidden-phone "><a href="{{route('category.edit',['id' => $category->id])}}"><span class="label label-success">ویرایش</span></a>  <a href="{{route('category.destroy',['id' => $category->id])}}"><span class="label label-danger">حذف</span></a> </td>
                                 </tr>
                                 @endforeach

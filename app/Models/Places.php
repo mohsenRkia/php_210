@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
+use App\Helper\TimeStampsConverter;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Places extends Model
 {
+    use TimeStampsConverter;
     public function categories()
     {
         return $this->belongsTo(Categories::class);

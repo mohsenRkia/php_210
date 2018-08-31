@@ -1,6 +1,6 @@
 @extends('admin.layout.index')
 
-@section('title' , 'ایجاد دسته جدید')
+@section('title' , 'ایجاد شهر جدید')
 
 
 @section('maincontent')
@@ -11,7 +11,7 @@
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            ایجاد دسته جدید
+                            ایجاد شهر جدید
 
                         </header>
             <div class="panel-body">

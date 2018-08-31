@@ -1,7 +1,7 @@
 @extends('site.layout.more')
 
 @section('title')
-    ثبت نهایی
+    ثبت نهایی {{$place->title}}
 @endsection
 
 @section('single')

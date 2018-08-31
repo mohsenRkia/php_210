@@ -1,6 +1,6 @@
 @extends('admin.layout.index')
 
-@section('title' , 'داشبورد')
+@section('title' , 'ویرایش اقامتگاه')
 
 @section('maincontent')
 
@@ -11,7 +11,7 @@
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            ایجاد مطلب جدید
+                            ویرایش اقامتگاه
 
                         </header>
                         <div class="panel-body">
@@ -43,7 +43,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">دسته</label>
+                                    <label class="col-sm-2 control-label">شهر</label>
                                     <div class="col-sm-6">
                                         <select class="form-control input-sm m-bot15" name="category_id">
                                             <option value="{{$cat->id}}">{{$cat->name}}</option>

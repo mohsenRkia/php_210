@@ -1,6 +1,6 @@
 @extends('admin.layout.index')
 
-@section('title' , 'مطالب قبلی')
+@section('title' , 'سفارشات مشتری')
 
 
 @section('maincontent')
@@ -12,7 +12,7 @@
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            مطالب قبلی
+                            سفارشات مشتری
 
                         </header>
                         <div id="sample_1_wrapper" class="dataTables_wrapper form-inline" role="grid">

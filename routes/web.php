@@ -56,6 +56,14 @@ Route::group(['prefix' => 'single'],function (){
             'uses' => 'ProfileController@orders',
             'as' => 'profile.myorders'
         ]);
+        Route::get('/setting/{id}',[
+           "uses" => 'ProfileController@edit',
+           'as' => 'profile.setting'
+        ])->middleware('accesseditor');
+        Route::post('/setting/{id}',[
+           'uses' => 'ProfileController@update',
+           'as' => 'profile.update'
+        ]);
     });
 
     /**
