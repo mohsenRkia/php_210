@@ -43,7 +43,17 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $this->category->create($request->only(['name']));
+        $this->validate($request,[
+           'name' => 'required|min:4|max:50'
+        ]);
+        $create = $this->category->create($request->only(['name']));
+
+        if ($create){
+            $request->session()->flash('done','شهر مورد نظر با موفقیت افزوده شد');
+        }else{
+            $request->session()->flash('didnt','افزودن شهر با خطا روبرو شد');
+        }
+
         return redirect()->route('category.index');
     }
 
@@ -79,9 +89,17 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request,[
+            'name' => 'required|min:4|max:50'
+        ]);
         $categories = $this->category->find($id);
         $categories->name = $request->get('name');
-        $categories->save();
+        if ($categories->save()){
+            $request->session()->flash('done','شهر مورد نظر با موفقیت ویرایش شد');
+        }else{
+            $request->session()->flash('didnt','ویرایش شهر با خطا روبرو شد');
+        }
+
         return redirect()->route('category.index');
     }
 
@@ -91,10 +109,15 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,Request $request)
     {
         $category = $this->category->find($id);
-        $category->delete();
+        if ($category->delete()){
+            $request->session()->flash('done','شهر مورد نظر با موفقیت حذف شد');
+        }else{
+            $request->session()->flash('didnt','حذف شهر با خطا روبرو شد');
+        }
+
         return redirect()->route('category.index');
     }
 }

@@ -6,7 +6,13 @@
 
     <section id="main-content">
         <section class="wrapper">
-
+            @if($errors->count())
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li class="alert alert-danger">{{$error}}</li>
+                    @endforeach
+                </ul>
+            @endif
             <div class="row">
                 <div class="col-lg-12">
                     <section class="panel">

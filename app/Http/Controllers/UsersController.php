@@ -43,10 +43,19 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        $this->users->create($request->only([
+        $this->validate($request,[
+           'name' => 'required|alpha-num|min:6|max:100',
+           'email' => 'required|email',
+           'password' => 'required|min:6'
+        ]);
+        $create = $this->users->create($request->only([
             'name','email','password','role_id'
         ]));
-
+        if ($create){
+            $request->session()->flash('done','کاربر مورد نظر با موفقیت افزوده شد');
+        }else{
+            $request->session()->flash('didnt','افزودن کاربر با خطا روبرو شد');
+        }
         return redirect()->route('users.index');
     }
 
@@ -72,6 +81,11 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request,[
+            'name' => 'required|alpha-num|min:6|max:100',
+            'email' => 'required|email'
+        ]);
+
         $user = $this->users->find($id);
         $user->name = $request->get('name');
         $user->email = $request->get('email');
@@ -79,7 +93,11 @@ class UsersController extends Controller
             $user->password = Hash::make($request->get('password'));
         }
         $user->role_id = $request->get('role_id');
-        $user->save();
+        if ($user->save()){
+            $request->session()->flash('done','کاربر مورد نظر با موفقیت ویرایش شد');
+        }else{
+            $request->session()->flash('didnt','ویرایش کاربر با خطا روبرو شد');
+        }
 
         return redirect()->route('users.index');
     }
@@ -90,10 +108,16 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,Request $request)
     {
         $user = $this->users->find($id);
-        $user->delete();
+
+        if ($user->delete()){
+            $request->session()->flash('done','کاربر مورد نظر با موفقیت حذف شد');
+        }else{
+            $request->session()->flash('didnt','حذف کاربر با خطا روبرو شد');
+        }
+
         return redirect()->route('users.index');
     }
 }

@@ -25,6 +25,16 @@
                         <i class="fa fa-file-text-o"></i> <span class="mobileNone"> ثبت نهایی </span>
                     </li>
                 </ul>
+
+                @if($errors->count())
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li class="alert alert-danger">{{$error}}</li>
+                        @endforeach
+                    </ul>
+                @endif
+
+
                 <div class="jbDivBoxOrder step1">
                     <form method="POST" action="{{route('order.submit',['id' => $place->id])}}">
                         {{ csrf_field() }}
@@ -58,7 +68,8 @@
                                                     <div class="col-lg-12">
                                                     <div class="form-group col-lg-6">
                                                         <!-- start list -->
-                                                            <label for="birth">تاریخ ورود</label>
+                                                            <label for="birth" class="alert-success">تاریخ ورود</label>
+                                                        روز:
                                                         <select name="day_from" class="day">
                                                                 <option value="1" label="1">1</option>
                                                                 <option value="2" label="2">2</option>
@@ -92,6 +103,7 @@
                                                                 <option value="30" label="30">30</option>
                                                                 <option value="31" label="31">31</option>
                                                             </select>
+                                                        ماه :
                                                         <select name="month_from" class="month">
                                                             <option value="1" label="فروردین">فروردین</option>
                                                             <option value="2" label="اردیبهشت">اردیبهشت</option>
@@ -106,6 +118,7 @@
                                                             <option value="11" label="بهمن">بهمن</option>
                                                             <option value="12" label="اسفند">اسفند</option>
                                                         </select>
+                                                        سال :
                                                         <select name="year_from" class="year">
                                                             <option value="1397">1397</option>
                                                             <option value="1398">1398</option>
@@ -114,7 +127,8 @@
                                                     </div>
                                                         <div class="form-group col-lg-6">
                                                                 <!-- start list -->
-                                                            <label for="birth">تاریخ خروج</label>
+                                                            <label for="birth" class="alert-danger">تاریخ خروج</label>
+                                                            روز :
                                                             <select name="day_to" class="day">
                                                                 <option value="1" label="1">1</option>
                                                                 <option value="2" label="2">2</option>
@@ -148,6 +162,7 @@
                                                                 <option value="30" label="30">30</option>
                                                                 <option value="31" label="31">31</option>
                                                             </select>
+                                                            ماه :
                                                             <select name="month_to" class="month">
                                                                 <option value="1" label="فروردین">فروردین</option>
                                                                 <option value="2" label="اردیبهشت">اردیبهشت</option>
@@ -162,6 +177,7 @@
                                                                 <option value="11" label="بهمن">بهمن</option>
                                                                 <option value="12" label="اسفند">اسفند</option>
                                                             </select>
+                                                            سال :
                                                             <select name="year_to" class="year">
                                                                 <option value="1397">1397</option>
                                                                 <option value="1398">1398</option>
@@ -176,7 +192,7 @@
                                             تعداد مهمان :
                                         </label>
                                         <div class="col-lg-6">
-                                            <input type="text" name="persons" class="form-control" placeholder="تعداد مهمان ها (حداکثر {{$place->capacity}} نفر)" />
+                                            <input type="text" value="{{ old('persons') }}" name="persons" class="form-control" placeholder="تعداد مهمان ها (حداکثر {{$place->capacity}} نفر)" />
                                         </div>
 
                                     </div>
@@ -196,16 +212,16 @@
                                 <fieldset class="jbFieldsetAddMosafer">
                                     <div class="form-inline boxGest9386-114051">
                                         <div class="form-group col-sg-20 col-sm-12 paddingB10">
-                                            <input name="name" placeholder="نام" class="form-control">
+                                            <input value="{{ old('name') }}" name="name" placeholder="نام" class="form-control">
                                         </div>
                                         <div class="form-group col-sg-20 col-sm-12 paddingB10">
-                                            <input name="family" required="" placeholder="نام خانوادگی" class="form-control">
+                                            <input value="{{ old('family') }}" name="family" placeholder="نام خانوادگی" class="form-control">
                                         </div>
                                         <div class="form-group col-sg-20 col-sm-12 paddingB10">
-                                            <input name="mobile" placeholder="موبایل (09121234567)" class="form-control">
+                                            <input value="{{ old('mobile') }}" name="mobile" placeholder="موبایل (09121234567)" class="form-control">
                                         </div>
                                         <div class="form-group col-sg-20 col-sm-12 paddingB10">
-                                            <input name="nationalcode" placeholder="کد ملی" class="form-control">
+                                            <input value="{{ old('nationalcode') }}" name="nationalcode" placeholder="کد ملی" class="form-control">
                                         </div>
                                         <br>
                                         <hr>
@@ -215,7 +231,7 @@
                                     <div class="col-md-12">
                                         <h4 class="jbTitle"><span>ملاحظات</span></h4>
                                         <div class="jbAddMosafer">
-                                            <textarea name="decription" placeholder="ملاحظات مسافر" class="form-control" style="min-height: 100px"></textarea>
+                                            <textarea name="decription" placeholder="ملاحظات مسافر" class="form-control" style="min-height: 100px">{{ old('decription') }}</textarea>
                                         </div>
                                     </div>
                                 </div>

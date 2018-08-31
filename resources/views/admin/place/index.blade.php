@@ -7,7 +7,11 @@
 
     <section id="main-content">
         <section class="wrapper">
-
+            @if(Session::get('done'))
+                <div class="alert alert-success">{{Session::get('done')}}</div>
+                @elseif(Session::get('didnt'))
+                <div class="alert alert-danger">{{Session::get('didnt')}}</div>
+                @endif
             <div class="row">
                 <div class="col-lg-12">
                     <section class="panel">

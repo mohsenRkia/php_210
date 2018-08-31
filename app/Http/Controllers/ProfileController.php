@@ -49,13 +49,22 @@ class ProfileController extends Controller
 
     public function update(Request $request,$id)
     {
+        $this->validate($request,[
+            'name' => 'required',
+            'email' => 'required|email'
+        ]);
+
         $user = $this->user->find($id);
         $user->name = $request->get('name');
         $user->email = $request->get('email');
         if (strlen($request->get('password')) > 1){
             $user->password = Hash::make($request->get('password'));
         }
-        $user->save();
+        if ($user->save()){
+            $request->session()->flash('done','اطلاعات شما با موفقیت ویرایش شد');
+        }else{
+            $request->session()->flash('didnt','ویرایش اطلاعات با خطا روبرو شد');
+        }
         return redirect()->route('profile.index');
     }
 }

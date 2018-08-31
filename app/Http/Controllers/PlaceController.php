@@ -49,6 +49,15 @@ class PlaceController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request,[
+           'title' => 'required|min:8|max:100',
+            'body' => 'required|min:10',
+            'price' => 'required|numeric',
+            'capacity' => 'required|numeric',
+            'photo' => 'required|mimes:jpeg,bmp,png|max:200'
+        ]);
+
+
         $photo = $request->file('photo');
         $photoName = time() . "_" .$photo->getClientOriginalName();
         $path = public_path().'/upload';
@@ -62,7 +71,11 @@ class PlaceController extends Controller
         $places->capacity = $request->get('capacity');
         $places->categories_id = $request->get('category_id');
         $places->photo = $photoName;
-        $places->save();
+        if ($places->save()){
+            $request->session()->flash('done','اقامتگاه مورد نظر با موفقیت افزوده شد');
+        }else{
+            $request->session()->flash('didnt','افزودن اقامتگاه مورد نظر با خطا روبرو شد');
+        }
 
         return redirect()->route('place.index');
     }
@@ -101,20 +114,36 @@ class PlaceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $photo = $request->file('photo');
-        $photoName = time() . "_" .$photo->getClientOriginalName();
-        $path = public_path().'/upload';
-        $photo->move($path,$photoName);
+        $this->validate($request,[
+            'title' => 'required|min:8|max:100',
+            'body' => 'required|min:8',
+            'price' => 'required|numeric',
+            'capacity' => 'required|numeric',
+            'photo' => 'mimes:jpeg,bmp,png|max:200'
+        ]);
+
 
         $places = $this->places->find($id);
+
+        if ($request->file('photo')){
+            $photo = $request->file('photo');
+            $photoName = time() . "_" .$photo->getClientOriginalName();
+            $path = public_path().'/upload';
+            $photo->move($path,$photoName);
+            $places->photo = $photoName;
+        }
+
         $places->users_id = $request->get('user_id');
         $places->title = $request->get('title');
         $places->body = $request->get('body');
         $places->price = $request->get('price');
         $places->capacity = $request->get('capacity');
         $places->categories_id = $request->get('category_id');
-        $places->photo = $photoName;
-        $places->save();
+        if ($places->save()){
+            $request->session()->flash('done','اقامتگاه مورد نظر ویرایش شد');
+        }else{
+            $request->session()->flash('didnt','ویرایش اقامتگاه مورد نظر با خطا روبرو شد');
+        }
 
         return redirect()->route('place.index');
     }
@@ -125,10 +154,14 @@ class PlaceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,Request $request)
     {
         $place = $this->places->find($id);
-        $place->delete();
+        if ($place->delete()){
+            $request->session()->flash('done','اقامتگاه مورد نظر با موفقیت حذف شد');
+        }else{
+            $request->session()->flash('didnt','حذف اقامتگاه مورد نظر با خطا روبرو شد');
+        }
         return redirect()->route('place.index');
     }
 }

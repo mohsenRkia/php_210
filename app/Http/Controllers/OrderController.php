@@ -43,6 +43,14 @@ class OrderController extends Controller
 
     public function submit($id,Request $request)
     {
+        $this->validate($request,[
+            'persons' => 'required|numeric',
+            'name' => 'required|alpha',
+            'family' => 'required|alpha',
+            'mobile' => ['required','regex:/^09(0(\d)|1(\d)|2(\d)|3(\d)|(9(\d)))\d{7}$/'],
+            'nationalcode' => 'required|regex:/^[0-9 ]{10}$/',
+            'decription' => 'required'
+        ]);
         $yearFrom = $request->get('year_from');
         $monthFrom = $request->get('month_from');
         $dayFrom = $request->get('day_from');

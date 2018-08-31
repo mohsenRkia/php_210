@@ -7,6 +7,13 @@
 
     <section id="main-content">
         <section class="wrapper">
+            @if($errors->count())
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li class="alert alert-danger">{{$error}}</li>
+                    @endforeach
+                </ul>
+            @endif
             <div class="row">
                 <div class="col-lg-12">
                     <section class="panel">
@@ -20,13 +27,13 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">نام کاربری</label>
                                     <div class="col-sm-6">
-                                        <input class="form-control" type="text" name="name">
+                                        <input class="form-control" type="text" name="name" value="{{old('name')}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">ایمیل</label>
                                     <div class="col-sm-6">
-                                        <input class="form-control" type="text" name="email">
+                                        <input class="form-control" type="text" name="email" value="{{old('email')}}">
                                     </div>
                                 </div>
                                 <div class="form-group">

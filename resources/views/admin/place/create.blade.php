@@ -7,6 +7,13 @@
     <section id="main-content">
         <section class="wrapper">
 
+            @if($errors->count())
+                <ul>
+                    @foreach($errors->all() as $error)
+                    <li class="alert alert-danger">{{$error}}</li>
+                    @endforeach
+                </ul>
+            @endif
             <div class="row">
                 <div class="col-lg-12">
                     <section class="panel">
@@ -20,25 +27,25 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">عنوان مطلب</label>
                                     <div class="col-sm-6">
-                                        <input class="form-control" type="text" name="title">
+                                        <input class="form-control" type="text" name="title" value="{{old('title')}}">
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                         <label class="col-sm-2 control-label">چکیده مطلب</label>
                                     <div class="col-lg-10">
-                                        <textarea class="form-control" name="body"></textarea>
+                                        <textarea class="form-control" name="body">{{old('body')}}</textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">قیمت</label>
                                     <div class="col-sm-6">
-                                        <input class="form-control" type="text" name="price">
+                                        <input class="form-control" type="text" name="price" value="{{old('price')}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">ظرفیت</label>
                                     <div class="col-sm-6">
-                                        <input class="form-control" type="text" name="capacity">
+                                        <input class="form-control" type="text" name="capacity" value="{{old('capacity')}}">
                                     </div>
                                 </div>
 
